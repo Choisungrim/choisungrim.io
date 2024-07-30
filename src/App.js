@@ -6,14 +6,14 @@ const Profile = () => {
 
     const sendMessage = (type) => {
         const messageText = type === 'Career' ? '내 경력에 대해 이야기합니다.' : '내 기술에 대해 이야기합니다.';
-        const imageUrl = '/resource/response.jpg'; // 사용할 이미지 URL
-        const chat_bot_image = '/resource/image1.jpg'; // 사용할 이미지 URL
+        const imageUrl = './response.jpg'; // 사용할 이미지 URL
+        const chat_bot_image = './image1.jpg'; // 사용할 이미지 URL
 
         // 사용자 메시지 추가
         const userMessage = { sender: '상대방', text: messageText, image: imageUrl, class: 'response-message' };
         
         // 챗봇 응답 메시지 추가
-        const botMessageText = messageText === 'Career' ? '경력에 대한 정보를 표시합니다.' : '기술에 대한 정보를 표시합니다.';
+        const botMessageText = type === 'Career' ? '경력에 대한 정보를 표시합니다.' : '기술에 대한 정보를 표시합니다.';
         const botMessage = { sender: 'Chat-bot', text: botMessageText, image: chat_bot_image, class: 'response-message_1' };
 
         // 두 메시지를 한 번에 상태에 추가
@@ -24,7 +24,7 @@ const Profile = () => {
         <div className="main_container">
             <div className="container">
                 <div className="profile-image">
-                    <img src="/resource/image1.jpg" alt="내 이미지" style={{ width: '100%', borderRadius: '10px' }} />
+                    <img src="./image1.jpg" alt="내 이미지" style={{ width: '100%', borderRadius: '10px' }} />
                 </div>
                 <div className="message-area">
                     <h2>이름: 홍길동</h2>
@@ -34,7 +34,7 @@ const Profile = () => {
             </div>
             <div className="button-container">
                 <div className="profile-image-small">
-                    <img src="/resource/image1.jpg" alt="내 이미지" style={{ width: '50px', borderRadius: '10px' }} />
+                    <img src="./image1.jpg" alt="내 이미지" style={{ width: '50px', borderRadius: '10px' }} />
                     <div className="chatbot-bubble">
                         <div className="button-area">
                             <div className="chatbot-button" onClick={() => sendMessage('Career')}>내 경력</div>

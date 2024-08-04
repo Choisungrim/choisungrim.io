@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import './styles.css';
+import requestImageUrl from './request.jpg';
+import responseImageUrl from './response.jpg';
 
 const Profile = () => {
     const [messages, setMessages] = useState([]);
     const navigate = useNavigate (); // useHistory 훅을 사용하여 페이지 이동
 
+    useEffect(() => {
+        document.title = 'portfolio'; // 문서 제목 설정
+    }, []);
+
     const sendMessage = (type) => {
         const messageText = type === 'Career' ? '네 경력이 궁금해!' : '네 기술이 궁금해!';
-        const imageUrl = './response.jpg';
-        const chat_bot_image = './image1.jpg';
+        const imageUrl = responseImageUrl;
+        const chat_bot_image = requestImageUrl;
 
         const userMessage = { sender: '상대방', text: messageText, image: imageUrl, class: 'response-message' };
         const botMessageText = type === 'Career' ? CareerMessage() : SkillMessage();
@@ -24,7 +30,8 @@ const Profile = () => {
         return (
             <div style={{ whiteSpace: 'pre-line', fontFamily: 'inherit' }}>
                 {careerText}
-                <div className="chatbot-button" onClick={() => navigate('./resumeCareer')}>상세 경력 보기</div>
+                <div className="chatbot-button" onClick={() => navigate('/resumeCareer')}>상세 경력 보기</div>
+                <div className="chatbot-button" onClick={() => navigate('/')}>처음으로 돌아가기</div>
             </div>
         );
     };
@@ -35,7 +42,8 @@ const Profile = () => {
         return (
             <div style={{ whiteSpace: 'pre-line', fontFamily: 'inherit' }}>
                 {skillText}
-                <div className="chatbot-button" onClick={() => navigate('./resumeSkill')}>상세 기술 보기</div>
+                <div className="chatbot-button" onClick={() => navigate('/resumeSkill')}>상세 기술 보기</div>
+                <div className="chatbot-button" onClick={() => navigate('/')}>처음으로 돌아가기</div>
             </div>
         );
     };
@@ -70,7 +78,7 @@ const Profile = () => {
         <div className="main_container">
             <div className="container">
                 <div className="profile-image">
-                    <img src="./image1.jpg" alt="내 이미지" style={{ width: '100%', borderRadius: '10px' }} />
+                    <img src={requestImageUrl} alt="내 이미지" style={{ width: '100%', borderRadius: '10px' }} />
                 </div>
                 <div className="message-area">
                     <h2>이름: 최성림</h2>
@@ -80,7 +88,7 @@ const Profile = () => {
             </div>
             <div className="button-container">
                 <div className="profile-image-small">
-                    <img src="./image1.jpg" alt="내 이미지" style={{ width: '50px', borderRadius: '10px' }} />
+                    <img src={requestImageUrl} alt="내 이미지" style={{ width: '50px', borderRadius: '10px' }} />
                     <div className="chatbot-bubble">
                         <div className="button-area">
                             <div className="chatbot-button" onClick={() => sendMessage('Career')}>내 경력이 궁금해?</div>

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useNavigate  } from 'react-router-dom';
 
 const Resume = () => {
     const navigate = useNavigate ();
+
+    useEffect(() => {
+        document.title = 'portfolio'; // 문서 제목 설정
+    }, []);
 
     return (
         <div style={{ padding: '20px' }}>

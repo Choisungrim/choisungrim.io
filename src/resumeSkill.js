@@ -7,8 +7,9 @@ const ResumeCareer = () => {
 
     useEffect(() => {
         document.title = 'portfolio'; // 문서 제목 설정
+        window.scrollTo(0, 0); // 페이지가 로드될 때 스크롤을 맨 위로 이동
     }, []);
-
+    
     const handleNavigate = (path) => {
         navigate(path);
     };

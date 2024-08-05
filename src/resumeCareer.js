@@ -6,33 +6,35 @@ const ResumeCareer = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        document.title = ''; // 문서 제목 설정
+        document.title = 'portfolio'; // 문서 제목 설정
     }, []);
+
+    const handleNavigate = (path) => {
+        navigate(path);
+    };
 
     return (
         <div style={{ padding: '20px' }}>
             <div className='button-container_resume'>
-                <button className='chatbot-button_resume' onClick={() => navigate('/')}>돌아가기</button>
-                <button className='chatbot-button_resume' onClick={() => navigate('/resumeSkill')}>상세 기술 보기</button>
+                <button className='chatbot-button_resume' onClick={() => handleNavigate('/')}>돌아가기</button>
+                <button className='chatbot-button_resume' onClick={() => handleNavigate('/resumeSkill')}>상세 기술 보기</button>
             </div>
             <div className="resume-container">
                 <h1 className="resume-title">경력 상세 내용</h1>
 
                 <section className="resume-section">
                     <h2>개인 정보</h2>
-                    <ul>
-                        <p className="highlight">
-                            이름: 최성림<br />
-                            나이: 29세<br />
-                            연락처: 010-7742-1587<br />
-                            이메일: wowilos@naver.com
-                        </p>
-                    </ul>
+                    <div className="highlight">
+                        <p>이름: 최성림</p>
+                        <p>나이: 29세</p>
+                        <p>연락처: 010-7742-1587</p>
+                        <p>이메일: wowilos@naver.com</p>
+                    </div>
                 </section>
 
                 <section className="resume-section">
                     <h2>경력 상세 내용</h2>
-                    <ul>
+                    <div>
                         <li className="highlight">
                             <strong>(주)티라로보틱스</strong> - 솔루션 개발팀 (2022/07/18 - 2024/07/31)
                             <ol>
@@ -128,49 +130,41 @@ const ResumeCareer = () => {
                                 </li>
                             </ol>
                         </li>
-                    </ul>
+                    </div>
                 </section>
 
                 <section className="resume-section">
                     <h2>자격증</h2>
-                    <ul>
-                        <p className="highlight"> 
-                            2021.12 - SQLDeveloper - 한국데이터산업진흥원<br />
-                            2021.11 - 정보처리기사 - 한국산업인력공단<br />
-                            2020.06 - MOS - Microsoft<br />
-                            2016.11 - 네트워크관리사 2급 - 한국정보통신자격협회
-                        </p>
-                    </ul>
+                    <div className="highlight">
+                        <p>2021.12 - SQLDeveloper - 한국데이터산업진흥원</p>
+                        <p>2021.11 - 정보처리기사 - 한국산업인력공단</p>
+                        <p>2020.06 - MOS - Microsoft</p>
+                        <p>2016.11 - 네트워크관리사 2급 - 한국정보통신자격협회</p>
+                    </div>
                 </section>
 
                 <section className="resume-section">
                     <h2>블로그</h2>
-                    <ul>
-                        <p className='highlight'>
-                            <a href="https://70658277.tistory.com/">https://70658277.tistory.com/</a>
-                        </p>
-                    </ul>
+                    <div className='highlight'>
+                        <a href="https://yourblog.com" target="_blank" rel="noopener noreferrer">블로그 바로가기</a>
+                    </div>
                 </section>
 
                 <section className="resume-section">
                     <h2>자기소개서</h2>
-                    <ul>
-                        <p className='highlight'>
-                            저는 컴퓨터소프트웨어에 대한 열정을 바탕으로 지속적으로 성장하고 있는 개발자입니다. <br />
-                            대학 시절부터 프로그래밍 언어와 기술을 학습하며, Java와 Spring Framework를 통해 웹사이트 개발에 재미와 성취감을 느꼈습니다. <br />
-                            첫 직장에서는 서버 유지보수와 관리 업무를 담당하였으나, 개발 능력을 키우기 위해 6개월간 집중적으로 공부하였습니다.<br />
-                            이후 티라로보틱스에서 솔루션개발팀으로 근무하며 다양한 프로젝트를 진행하였고, <br />
-                            Message Queuing, Thread Safety, Camunda 등을 활용한 신규 솔루션 개발을 주도적으로 맡았습니다. <br />
-                            팀원들과의 협업을 통해 문제 해결 능력과 팀워크의 중요성을 깨달았습니다. <br />
-                            저의 강점은 새로운 기술을 빠르게 습득하고 이를 실무에 적용하는 능력이며,
-                            경험이 부족한 부분에서는 꾸준히 학습하고 도전하는 자세를 유지하고 있습니다.<br />
-                        </p>
-                    </ul>
+                    <div className='highlight'>
+                        <p>저는 컴퓨터소프트웨어에 대한 열정을 바탕으로 지속적으로 성장하고 있는 개발자입니다.</p>
+                        <p>대학 시절부터 프로그래밍 언어와 기술을 학습하며, Java와 Spring Framework를 통해 웹사이트 개발에 재미와 성취감을 느꼈습니다.</p>
+                        <p>첫 직장에서는 서버 유지보수와 관리 업무를 담당하였으나, 개발 능력을 키우기 위해 6개월간 집중적으로 공부하였습니다.</p>
+                        <p>이후 티라로보틱스에서 솔루션개발팀으로 근무하며 다양한 프로젝트를 진행하였고, Message Queuing, Thread Safety, Camunda 등을 활용한 신규 솔루션 개발을 주도적으로 맡았습니다.</p>
+                        <p>팀원들과의 협업을 통해 문제 해결 능력과 팀워크의 중요성을 깨달았습니다.</p>
+                        <p>저의 강점은 새로운 기술을 빠르게 습득하고 이를 실무에 적용하는 능력이며, 경험이 부족한 부분에서는 꾸준히 학습하고 도전하는 자세를 유지하고 있습니다.</p>
+                    </div>
                 </section>
             </div>
             <div className='button-container_resume'>
-                <button className='chatbot-button_resume' onClick={() => navigate('/')}>돌아가기</button>
-                <button className='chatbot-button_resume' onClick={() => navigate('/resumeSkill')}>상세 기술 보기</button>
+                <button className='chatbot-button_resume' onClick={() => handleNavigate('/')}>돌아가기</button>
+                <button className='chatbot-button_resume' onClick={() => handleNavigate('/resumeSkill')}>상세 기술 보기</button>
             </div>
         </div>
     );

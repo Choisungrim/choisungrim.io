@@ -11,9 +11,12 @@ const ResumeCareer = () => {
 
     return (
         <div style={{ padding: '20px' }}>
-            <button onClick={() => navigate('/')}>돌아가기</button>
+            <div className='button-container_resume'>
+                <button className='chatbot-button_resume' onClick={() => navigate('/')}>돌아가기</button>
+                <button className='chatbot-button_resume' onClick={() => navigate('/resumeSkill')}>상세 기술 보기</button>
+            </div>
             <div className="resume-container">
-                <h1 className="resume-title">이력서</h1>
+                <h1 className="resume-title">경력 상세 내용</h1>
 
                 <section className="resume-section">
                     <h2>개인 정보</h2>
@@ -28,7 +31,7 @@ const ResumeCareer = () => {
                 </section>
 
                 <section className="resume-section">
-                    <h2>경력 기술서</h2>
+                    <h2>경력 상세 내용</h2>
                     <ul>
                         <li className="highlight">
                             <strong>(주)티라로보틱스</strong> - 솔루션 개발팀 (2022/07/18 - 2024/07/31)
@@ -128,11 +131,11 @@ const ResumeCareer = () => {
                     </ul>
                 </section>
 
-                <section calssName="resume-section">
+                <section className="resume-section">
                     <h2>자격증</h2>
                     <ul>
-                        <p className='highlight' >
-                            2021.12 - SQL 개발자 - 한국데이터산업진흥원<br />
+                        <p className="highlight"> 
+                            2021.12 - SQLDeveloper - 한국데이터산업진흥원<br />
                             2021.11 - 정보처리기사 - 한국산업인력공단<br />
                             2020.06 - MOS - Microsoft<br />
                             2016.11 - 네트워크관리사 2급 - 한국정보통신자격협회
@@ -140,11 +143,11 @@ const ResumeCareer = () => {
                     </ul>
                 </section>
 
-                <section calssName="resume-section">
+                <section className="resume-section">
                     <h2>블로그</h2>
                     <ul>
-                        <p className='highlight' >
-                            https://70658277.tistory.com/
+                        <p className='highlight'>
+                            <a href="https://70658277.tistory.com/">https://70658277.tistory.com/</a>
                         </p>
                     </ul>
                 </section>
@@ -165,7 +168,10 @@ const ResumeCareer = () => {
                     </ul>
                 </section>
             </div>
-            <button onClick={() => navigate('/')}>돌아가기</button>
+            <div className='button-container_resume'>
+                <button className='chatbot-button_resume' onClick={() => navigate('/')}>돌아가기</button>
+                <button className='chatbot-button_resume' onClick={() => navigate('/resumeSkill')}>상세 기술 보기</button>
+            </div>
         </div>
     );
 };

@@ -13,12 +13,16 @@ const Profile = () => {
     }, []);
 
     const sendMessage = (type) => {
-        const messageText = type === 'Career' ? '네 경력이 궁금해!' : '네 기술이 궁금해!';
+        setTimeout(() => {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }, 200); // 300ms = 0.3초
+
+        const messageText = type === 'Career' ? '네 경력이 궁금해!' : type === 'Skill' ? '네 기술이 궁금해!' : '네 포폴이 궁금해!';
         const imageUrl = responseImageUrl;
         const chat_bot_image = requestImageUrl;
 
         const userMessage = { sender: '상대방', text: messageText, image: imageUrl, class: 'response-message' };
-        const botMessageText = type === 'Career' ? CareerMessage() : SkillMessage();
+        const botMessageText = type === 'Career' ? CareerMessage() : type === 'Skill' ? SkillMessage(): PoflioMessage();
         const botMessage = { sender: 'Chat-bot', text: botMessageText, image: chat_bot_image, class: 'response-message_1' };
 
         setMessages(prevMessages => [...prevMessages, userMessage, botMessage]);
@@ -48,8 +52,41 @@ const Profile = () => {
         );
     };
 
+    const PoflioMessage = () => {
+        const pofolioText = setPofolioMsg();
+        
+        return (
+            <div style={{ whiteSpace: 'pre-line', fontFamily: 'inherit' }}>
+                {pofolioText}
+                <div className="chatbot-button" onClick={() => navigate('/loading/resumePortfolio')}>상세 포폴 보기</div>
+                <div className="chatbot-button" onClick={resetChat}>처음으로 돌아가기</div>
+            </div>
+        );
+    }
+
+    const ResetMessage = () => {
+        return (
+            <div style={{ whiteSpace: 'pre-line', fontFamily: 'inherit' }}>
+                <div className="chatbot-button" onClick={() => sendMessage('Career')}>내 경력이 궁금해?</div>
+                <div className="chatbot-button" onClick={() => sendMessage('Skill')}>내 기술이 궁금해?</div>
+                {/* <div className="chatbot-button" onClick={() => sendMessage('Portfolio')}>내 포폴이 궁금해?</div> */}
+            </div>
+        );
+    }
+
     const resetChat = () => {
-        setMessages([]); // 메시지 초기화
+        setTimeout(() => {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }, 200); // 300ms = 0.3초
+        const messageText = '처음으로 돌아갑니다.'
+        const imageUrl = responseImageUrl;
+        const chat_bot_image = requestImageUrl;
+
+        const userMessage = { sender: '상대방', text: messageText, image: imageUrl, class: 'response-message' };
+        const botMessageText = ResetMessage()
+        const botMessage = { sender: 'Chat-bot', text: botMessageText, image: chat_bot_image, class: 'response-message_1' };
+
+        setMessages(prevMessages => [...prevMessages, userMessage, botMessage]); // 메시지 초기화
     };
 
     const setCareerMsg = () => {
@@ -74,6 +111,14 @@ const Profile = () => {
         );
     };
 
+
+    const setPofolioMsg = () => {
+        return (
+            "경력 내용에 해당하는 프로젝트들을 상세히 정리해서 알려줄게! \n" +
+            "아래 버튼을 클릭해줘\n"
+        );
+    };
+
     return (
         <div className="main_container">
             <div className="container">
@@ -93,15 +138,16 @@ const Profile = () => {
                         <div className="button-area">
                             <div className="chatbot-button" onClick={() => sendMessage('Career')}>내 경력이 궁금해?</div>
                             <div className="chatbot-button" onClick={() => sendMessage('Skill')}>내 기술이 궁금해?</div>
+                            {/* <div className="chatbot-button" onClick={() => sendMessage('Portfolio')}>내 포폴이 궁금해?</div> */}
                         </div>
                     </div>
                 </div>
             </div>
             {/* 메시지를 표시할 영역 */}
-            <div id="responseArea" className="response-area" style={{ marginTop: '20px' }}>
+            <div id="responseArea" className="response-area">
                 {messages.map((message, index) => (
-                    <div key={index} className={message.class} style={{ display: 'flex', alignItems: 'center', margin: '5px 0' }}>
-                        <div style={{ backgroundColor: '#f0f0f0', borderRadius: '10px', padding: '10px', maxWidth: '70%', position: 'relative' }}>
+                    <div key={index} className={message.class} style={{ display: 'flex', alignItems: 'center' }}>
+                        <div style={{ backgroundColor: '#f0f0f0', borderRadius: '10px', padding: '10px', maxWidth: '70%', position: 'relative', marginBottom: '10px' }}>
                             {message.text}
                         </div>
                         <img src={message.image} alt="Response" style={{ width: '50px', borderRadius: '10px', marginLeft: '10px' }} />

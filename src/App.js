@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Profile from './profile';
 import ResumeCareer from './resumeCareer';
 import ResumeSkill from './resumeSkill';
+import ResumePortfolio from './resumePortfolio';
 import Loading from './loading';
 import './App.css';
 
@@ -67,6 +68,20 @@ function App() {
                             transition={{ duration: 0.5 }}
                         >
                             <ResumeSkill />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/resumeportfolio"
+                    element={
+                        <motion.div
+                            initial="initial"
+                            animate="in"
+                            exit="out"
+                            variants={pageVariants}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <ResumePortfolio />
                         </motion.div>
                     }
                 />

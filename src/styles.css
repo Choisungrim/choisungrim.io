@@ -37,6 +37,11 @@ body {
     width: 65%;
 }
 
+.button-area {
+    position: relative; /* 필요한 경우 위치 설정 */
+    transition: all 0.3s ease; /* 부드러운 전환 효과 */
+}
+
 .profile-image-small {
     position: relative; /* 말풍선 위치 설정을 위한 상대적 위치 */
 }
@@ -90,7 +95,7 @@ body {
     display: flex; /* 플렉스 박스 사용 */
     justify-content: flex-end;
     align-items: center; /* 중앙 정렬 */
-    margin: 10px 0; /* 위아래 여백 */
+    margin: 20px 0; /* 위아래 여백 */
 }
 
 .response-message img {
@@ -113,7 +118,7 @@ body {
     justify-content: flex-end;
     flex-direction: row-reverse;
     align-items: center; /* 중앙 정렬 */
-    margin: 10px 5px; /* 위아래 여백 */
+    margin: 20px 5px; /* 위아래 여백 */
 }
 
 .response-message_1 img {

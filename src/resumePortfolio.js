@@ -19,23 +19,13 @@ const ResumeCareer = () => {
             <div className="button-container_resume">
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/')}>돌아가기</button>
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumeCareer')}>상세 경력 보기</button>
-                {/* <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumePortfolio')}>상세 포폴 보기</button> */}
+                <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumeSkill')}>상세 기술 보기</button>
             </div>
             <div className="resume-container">
-                <h1 className="resume-title">기술 상세 내용</h1>
+                <h1 className="resume-title">프로젝트 상세 내용</h1>
 
                 <section className="resume-section">
-                    <h2>개인 정보</h2>
-                    <div className="highlight">
-                        <p>이름: 최성림</p>
-                        <p>나이: 29세</p>
-                        <p>연락처: 010-7742-1587</p>
-                        <p>이메일: wowilos@naver.com</p>
-                    </div>
-                </section>
-
-                <section className="resume-section">
-                    <h2>기술 상세 내용</h2>
+                    <h2>프로젝트 상세 내용</h2>
                     <div>
                         <li className="highlight">
                             <strong>프로그래밍 언어</strong>
@@ -152,7 +142,7 @@ const ResumeCareer = () => {
             <div className="button-container_resume">
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/')}>돌아가기</button>
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumeCareer')}>상세 경력 보기</button>
-                {/* <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumePortfolio')}>상세 포폴 보기</button> */}
+                <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumeSkill')}>상세 기술 보기</button>
             </div>
         </div>
     );

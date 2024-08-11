@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Profile from './profile';
 import ResumeCareer from './resumeCareer';
 import ResumeSkill from './resumeSkill';
+import Loading from './loading';
 import './App.css';
 
 const pageVariants = {
@@ -66,6 +67,20 @@ function App() {
                             transition={{ duration: 0.5 }}
                         >
                             <ResumeSkill />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/loading/:nextPage"
+                    element={
+                        <motion.div
+                            initial="initial"
+                            animate="in"
+                            exit="out"
+                            variants={pageVariants}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <Loading />
                         </motion.div>
                     }
                 />

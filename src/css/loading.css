@@ -1,0 +1,30 @@
+.next-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 페이지 높이를 화면에 맞춤 */
+    overflow: hidden; /* 넘치는 내용 숨김 */
+    position: relative; /* 드랍을 절대 위치로 배치할 수 있도록 */
+  }
+  
+  .loading-bar {
+    width: 100%; /* 로딩 바를 화면 너비에 맞춤 */
+    height: 20px; /* 로딩 바의 높이 설정 */
+    background-color: #91b5e471; /* 배경색 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    overflow: hidden; /* 초과 부분 숨김 */
+  }
+  
+  .loading-fill {
+    height: 100%; /* 높이를 100%로 설정 */
+    background-color: #4caf50; /* 로딩 색상 */
+    transition: width 0.5s ease; /* 애니메이션 효과 */
+  }
+  
+  .raindrop-container {
+    position: relative; /* 드랍을 절대 위치로 배치할 수 있도록 */
+    width: 100%; /* 전체 너비 */
+    height: calc(100% - 60px); /* 로딩 바 높이만큼 제외한 전체 높이 */
+  }
+  

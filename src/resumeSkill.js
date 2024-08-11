@@ -18,7 +18,7 @@ const ResumeCareer = () => {
         <div style={{ padding: '20px' }}>
             <div className="button-container_resume">
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/')}>돌아가기</button>
-                <button className='chatbot-button_resume' onClick={() => handleNavigate('/resumeCareer')}>상세 경력 보기</button>
+                <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumeCareer')}>상세 경력 보기</button>
             </div>
             <div className="resume-container">
                 <h1 className="resume-title">기술 상세 내용</h1>
@@ -137,15 +137,11 @@ const ResumeCareer = () => {
                                 </li>
                                 <li>
                                     <strong>Jenkins</strong>
-                                    <p> - CI/CD를 이용하여 배포 환경 자동화를 경험하였고, 서비스 릴리즈 정보를 관리하였음.</p>
+                                    <p> - CI/CD를 이용하여 배포 환경 자동화를 경험하였고, 서비스 릴리즈 정보를 관리.</p>
                                 </li>
                                 <li>
                                     <strong>SonarQube</strong>
-                                    <p> - 코드 품질 개선을 위한 내부 소스코드 유효성 검사 및 오류 수정을 경험하였음.</p>
-                                </li>
-                                <li>
-                                    <strong>Prometheus</strong>
-                                    <p> - 서버 성능 모니터링 및 알림 시스템을 구축하여 시스템 안정성을 유지 관리한 경험이 있음.</p>
+                                    <p> - 코드 품질 개선을 위한 내부 소스코드 유효성 검사 및 오류 수정을 경험.</p>
                                 </li>
                             </ol>
                         </li>
@@ -154,7 +150,7 @@ const ResumeCareer = () => {
             </div>
             <div className="button-container_resume">
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/')}>돌아가기</button>
-                <button className='chatbot-button_resume' onClick={() => handleNavigate('/resumeCareer')}>상세 경력 보기</button>
+                <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumeCareer')}>상세 경력 보기</button>
             </div>
         </div>
     );

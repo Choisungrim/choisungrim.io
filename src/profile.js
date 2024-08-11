@@ -30,7 +30,7 @@ const Profile = () => {
         return (
             <div style={{ whiteSpace: 'pre-line', fontFamily: 'inherit' }}>
                 {careerText}
-                <div className="chatbot-button" onClick={() => navigate('/resumeCareer')}>상세 경력 보기</div>
+                <div className="chatbot-button" onClick={() => navigate('/loading/resumeCareer')}>상세 경력 보기</div>
                 <div className="chatbot-button" onClick={resetChat}>처음으로 돌아가기</div>
             </div>
         );
@@ -42,7 +42,7 @@ const Profile = () => {
         return (
             <div style={{ whiteSpace: 'pre-line', fontFamily: 'inherit' }}>
                 {skillText}
-                <div className="chatbot-button" onClick={() => navigate('/resumeSkill')}>상세 기술 보기</div>
+                <div className="chatbot-button" onClick={() => navigate('/loading/resumeSkill')}>상세 기술 보기</div>
                 <div className="chatbot-button" onClick={resetChat}>처음으로 돌아가기</div>
             </div>
         );
@@ -54,23 +54,23 @@ const Profile = () => {
 
     const setCareerMsg = () => {
         return (
-            "현재 (주)티라로보틱스 솔루션 개발팀에서 2022년 7월부터 2024년 7월 31일까지 재직 중입니다.\n" +
-            "Python 기반 로봇관제 시스템에서 트래픽 제어 및 이벤트 처리를 담당하며, python으로 구현한 시스템을 Spring Framework으로 포팅, 활용한 웹 애플리케이션 개발을 수행했습니다.\n" +
-            "Warehouse Robot Kitting Solution(WRS)을 주도적으로 개발하고, Spring Boot와 JPA를 이용한 웹서버 시스템을 구축했습니다.\n" +
-            "사용자가 프로세스를 수정할 수 있도록 Camunda와 연동 개발을 담당했습니다.\n" +
-            "이전에는 (주)시스게이트에서 2년간 인프라 운영 유지보수 및 백업관리를 수행했습니다.\n" +
-            "자세한 내용은 아래 버튼을 클릭해주세요.\n"
+            "현재 (주)티라로보틱스 솔루션 개발팀에서 2022년 7월부터 2024년 7월 31일까지 근무하고.\n" +
+            "Python 기반 로봇관제 시스템에서 트래픽 제어 및 이벤트 처리를 담당하였어, 주 업무는 python으로 구현한 시스템을 Spring Framework으로 포팅한 웹 애플리케이션 개발을 수행했어\n" +
+            "물류 로봇 키팅 솔루션을 개발하고, Spring Boot와 JPA를 이용한 웹서버 시스템을 구축했고,\n" +
+            "사용자가 프로세스를 수정할 수 있도록 Camunda와 연동 개발을 담당했어\n" +
+            "이전에는 (주)시스게이트에서 2년간 인프라 운영 유지보수 및 백업관리를 수행했어.\n" +
+            "자세한 내용은 아래 버튼을 클릭해줘\n"
         );
     };
     
 
     const setSkillMsg = () => {
         return (
-            "다양한 기술을 활용하여 웹 애플리케이션을 개발하고 있습니다. \n" +
-            "Java, Spring, MySQL, Docker 등 백엔드 개발에 능숙하며, Node.js와 Nest.js로 서버 사이드 애플리케이션을 구축합니다. \n" +
-            "또한, React와 jQuery 등 프론트엔드 기술에 대한 기본적인 이해를 갖추고 있습니다. \n" +
-            "이러한 기술을 바탕으로 효율적이고 안정적인 웹 애플리케이션 개발에 주력하고 있습니다.\n" +
-            "자세한 내용은 아래 버튼을 클릭해주세요.\n"
+            "다양한 기술을 활용하여 웹 애플리케이션을 개발하고있어. \n" +
+            "Java, Spring, MySQL, Docker 등 백엔드 개발을 한 경험이 있고, Node.js와 Nest.js로 서버 사이드 애플리케이션을 구축한 경험이있어. \n" +
+            "또한, React와 jQuery 등 프론트엔드 기술에 대한 기본적인 이해도를 가지고 있고, \n" +
+            "이러한 기술을 바탕으로 효율적이고 안정적인 웹 애플리케이션 개발을 주력으로 하고있어.\n" +
+            "자세한 내용은 아래 버튼을 클릭해줘\n"
         );
     };
 

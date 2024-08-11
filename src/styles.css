@@ -82,13 +82,15 @@ body {
     width: 65%;
     margin-top: 10px;
     text-align: left; /* 왼쪽 정렬 */
+    display: flex;
+    flex-direction: column;
 }
 
 .response-message {
     display: flex; /* 플렉스 박스 사용 */
     justify-content: flex-end;
     align-items: center; /* 중앙 정렬 */
-    margin: 5px 0; /* 위아래 여백 */
+    margin: 10px 0; /* 위아래 여백 */
 }
 
 .response-message img {
@@ -111,7 +113,7 @@ body {
     justify-content: flex-end;
     flex-direction: row-reverse;
     align-items: center; /* 중앙 정렬 */
-    margin: 0 5px; /* 위아래 여백 */
+    margin: 10px 5px; /* 위아래 여백 */
 }
 
 .response-message_1 img {
@@ -128,3 +130,8 @@ body {
     position: relative; /* 위치 설정 */
 }
 
+@media (max-width: 600px) {
+    .response-message, .response-message_1 {
+        max-width: 90%; /* 모바일에서는 더 넓은 공간 확보 */
+    }
+}

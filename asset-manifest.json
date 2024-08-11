@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/choisungrim.io/static/css/main.191192c0.css",
-    "main.js": "/choisungrim.io/static/js/main.2831d9c6.js",
+    "main.css": "/choisungrim.io/static/css/main.991ec76c.css",
+    "main.js": "/choisungrim.io/static/js/main.bc1d6ccc.js",
     "static/js/453.ed3810f9.chunk.js": "/choisungrim.io/static/js/453.ed3810f9.chunk.js",
     "index.html": "/choisungrim.io/index.html",
-    "main.191192c0.css.map": "/choisungrim.io/static/css/main.191192c0.css.map",
-    "main.2831d9c6.js.map": "/choisungrim.io/static/js/main.2831d9c6.js.map",
+    "main.991ec76c.css.map": "/choisungrim.io/static/css/main.991ec76c.css.map",
+    "main.bc1d6ccc.js.map": "/choisungrim.io/static/js/main.bc1d6ccc.js.map",
     "453.ed3810f9.chunk.js.map": "/choisungrim.io/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.191192c0.css",
-    "static/js/main.2831d9c6.js"
+    "static/css/main.991ec76c.css",
+    "static/js/main.bc1d6ccc.js"
   ]
 }

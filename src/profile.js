@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import './styles.css';
-import requestImageUrl from './request.jpg';
-import responseImageUrl from './response.jpg';
+import requestImageUrl from './resource/request.jpg';
+import responseImageUrl from './resource/response.jpg';
 
 const Profile = () => {
     const [messages, setMessages] = useState([]);

@@ -1,9 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './css/resumeCareer.css'; // 스타일 파일을 별도로 관리
+import ParkerImage from './resource/parker.jpg';
+import ParkerLayoutImage from './resource/parker_layout.png';
+import AmoreImage from './resource/amore.jpg';
+import AmoreFms from './resource/amore_fms.jpg';
+import FmsMain from './resource/fmsMain.jpg';
+import Camunda from './resource/camunda.png';
 
 const ResumeCareer = () => {
     const navigate = useNavigate();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState('');
 
     useEffect(() => {
         document.title = 'portfolio'; // 문서 제목 설정
@@ -14,12 +22,21 @@ const ResumeCareer = () => {
         navigate(path);
     };
 
+    const openModal = (imageSrc) => {
+        setSelectedImage(imageSrc);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedImage('');
+    };
+
     return (
         <div style={{ padding: '20px' }}>
             <div className='button-container_resume'>
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/')}>돌아가기</button>
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumeSkill')}>상세 기술 보기</button>
-                {/* <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumePortfolio')}>상세 포폴 보기</button> */}
             </div>
             <div className="resume-container">
                 <h1 className="resume-title">경력 상세 내용</h1>
@@ -40,58 +57,90 @@ const ResumeCareer = () => {
                         <li className="highlight">
                             <strong>(주)티라로보틱스</strong> - 솔루션 개발팀 (2022/07/18 - 2024/07/31)
                             <ol>
+                            <li className="flex-container">
+                                <div className="text-content">
                                 <li>
-                                    <strong>P사 FMS 시스템 구축</strong> (2022.07 ~ 2022.09)
+                                    <strong>P사 FMS 시스템 구축</strong>
+                                    <p>(2022.07 ~ 2022.09)</p>
                                     <p>주요 업무: AMR 연동 시스템 및 UI 개발, 네트워크 망 구축</p>
                                     <p>사용 기술: Python, TCP Socket, MQTT, PostgreSQL</p>
                                     <p>프로젝트 성과: AMR 회전 문제 해결</p>
-                                    <strong>해결 방안</strong> 
+                                    <strong>해결 방안</strong>
                                     <ol>
                                         <li>AMR과의 원활한 통신을 위해 TCP Socket 및 MQTT 프로토콜을 활용하여 데이터 전송 및 수신을 위한 Client 개발</li>
                                         <li>UI에서의 피드백을 통해 실시간 모니터링을 최적화하여 표시 및 정확한 위치 파악</li>
                                         <li>AMR의 위치에 따른 회전 문제를 특정 구간에서 회전을 못하도록 제어하여 회전 오류 발생률을 30% 감소시킴</li>
                                     </ol>
                                 </li>
-                                <br />
-                                <li>
-                                    <strong>A사 FMS 시스템 리빌딩</strong> (2022.08 ~ 2022.10)
-                                    <p>주요 업무: PLC 신호 통신 및 트래픽 제어 구축</p>
-                                    <p>사용 기술: Python, PLC, MQTT, PostgreSQL</p>
-                                    <p>프로젝트 성과: 트래픽 제어 효율성 향상</p>
-                                    <strong>해결 방안</strong>
-                                    <ol>
-                                        <li>PLC 신호 통신을 최적화하여 작업의 효율성을 높임</li>
-                                        <li>대기 시간에 따른 자동 충전 및 대기위치 이동 개발 및 process 설계</li>
-                                        <li>실시간 데이터 모니터링 시스템 구축으로 문제 발생 시 즉각 대처 가능</li>
-                                    </ol>
-                                </li>
-                                <br />
-                                <li>
-                                    <strong>WRS 개발 G사 POC</strong> (2022.11 ~ 2023.03)
-                                    <p>주요 업무: WRS 솔루션 개발 및 로봇 메시징 프로토콜 구현</p>
-                                    <p>사용 기술: Spring Boot, JPA, Mybatis, Oracle, MQTT, Java, JavaScript, RabbitMQ, Erlang</p>
-                                    <p>프로젝트 성과: 자동화된 창고 키팅 솔루션 개발</p>
-                                    <strong>해결 방안</strong>
-                                    <ol>
-                                        <li>WRS 솔루션의 메시징 프로토콜 개선으로 로봇 간 효율적인 데이터 전송 보장</li>
-                                        <li>자동화된 키팅 프로세스를 통해 물류 현장 작업자의 속도를 40% 향상</li>
-                                    </ol>
-                                </li>
-                                <br />
-                                <li>
-                                    <strong>FMS(Fleet Management System) Version Upgrade</strong> (2023.01 ~ 2023.07)
-                                    <p>주요 업무: FMS 솔루션 개발 및 로봇 간 트래픽 제어</p>
-                                    <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, TCP Socket, Camunda</p>
-                                    <p>프로젝트 성과: 자체 개발 (리브랜딩)</p>
-                                    <strong>해결 방안</strong>
-                                    <ol>
-                                        <li>사용자 피드백을 반영한 UI/UX 개선 작업을 통해 직관적인 인터페이스 구현</li>
-                                        <li>트래픽 제어 알고리즘 최적화를 통해 시스템 반응 속도 향상</li>
-                                        <li>기존 python, PostgreSQL로 구현한 시스템을 Spring, MariaDB로 마이그레이션 및 포팅</li>
-                                        <li>사용자가 비 코딩으로 업무 프로세스를 구현하여 로봇이 작동되게 외부 Process API를 Embedded 설계 및 구현</li>
-                                    </ol>
-                                </li>
-                                <br />
+                                </div>
+                                <div className="image-container">
+                                    <img src={ParkerImage} alt="parker" className="inline-image" onClick={() => openModal(ParkerImage)} />
+                                    <img src={ParkerLayoutImage} alt="parker_layout" className="inline-image" onClick={() => openModal(ParkerLayoutImage)} />
+                                    <p>출처 : 티라로보틱스 유튜브 </p>
+                                </div>
+                            </li>
+                            <br />
+                            <li className="flex-container">
+                                <div className="text-content">
+                                    <li>
+                                        <strong>A사 FMS 시스템 리빌딩</strong> (2022.08 ~ 2022.10)
+                                        <p>주요 업무: PLC 신호 통신 및 트래픽 제어 구축</p>
+                                        <p>사용 기술: Python, PLC, MQTT, PostgreSQL</p>
+                                        <p>프로젝트 성과: 트래픽 제어 효율성 향상</p>
+                                        <strong>해결 방안</strong>
+                                        <ol>
+                                            <li>PLC 신호 통신을 최적화하여 작업의 효율성을 높임</li>
+                                            <li>대기 시간에 따른 자동 충전 및 대기위치 이동 개발 및 process 설계</li>
+                                            <li>실시간 데이터 모니터링 시스템 구축으로 문제 발생 시 즉각 대처 가능</li>
+                                        </ol>
+                                    </li>
+                                </div>
+                                <div className="image-container">
+                                    <img src={AmoreImage} alt="amore" className="inline-image" onClick={() => openModal(AmoreImage)} />
+                                    <img src={AmoreFms} alt="amore_fms" className="inline-image" onClick={() => openModal(AmoreFms)} />
+                                    <p>출처 : 티라로보틱스 유튜브 </p>
+                                </div>
+                            </li>
+                            <br />
+                            <li className="flex-container">
+                                <div className="text-content">
+                                    <li>
+                                        <strong>WRS 개발 G사 POC</strong> (2022.11 ~ 2023.03)
+                                        <p>주요 업무: WRS 솔루션 개발 및 로봇 메시징 프로토콜 구현</p>
+                                        <p>사용 기술: Spring Boot, JPA, Mybatis, Oracle, MQTT, Java, JavaScript, RabbitMQ, Erlang</p>
+                                        <p>프로젝트 성과: 자동화된 창고 키팅 솔루션 개발</p>
+                                        <strong>해결 방안</strong>
+                                        <ol>
+                                            <li>WRS 솔루션의 메시징 프로토콜 개선으로 로봇 간 효율적인 데이터 전송 보장</li>
+                                            <li>자동화된 피킹 프로세스를 통해 물류 현장 작업자의 속도를 40% 향상</li>
+                                        </ol>
+                                    </li>
+                                </div>
+                            </li>
+                            <br />
+                            <li className="flex-container">
+                                <div className="text-content">
+                                    <li>
+                                        <strong>FMS(Fleet Management System) Version Upgrade</strong> (2023.01 ~ 2023.07)
+                                        <p>주요 업무: FMS 솔루션 개발 및 로봇 간 트래픽 제어</p>
+                                        <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, TCP Socket, Camunda</p>
+                                        <p>프로젝트 성과: 자체 개발 (re branding)</p>
+                                        <strong>해결 방안</strong>
+                                        <ol>
+                                            <li>사용자 피드백을 반영한 UI/UX 개선 작업을 통해 직관적인 인터페이스 구현</li>
+                                            <li>트래픽 제어 알고리즘 최적화를 통해 시스템 반응 속도 향상</li>
+                                            <li>기존 python, PostgreSQL로 구현한 시스템을 Spring, MariaDB로 마이그레이션 및 포팅</li>
+                                            <li>사용자가 비 코딩으로 업무 프로세스를 구현하여 로봇이 작동되게 외부 Process API를 Embedded 설계 및 구현</li>
+                                        </ol>
+                                    </li>
+                                </div>
+                                <div className="image-container">
+                                    <img src={FmsMain} alt="fmsMain" className="inline-image" onClick={() => openModal(FmsMain)} />
+                                    <img src={Camunda} alt="camunda" className="inline-image" onClick={() => openModal(Camunda)} />
+                                    <p>출처 : 로봇 자동화 협력 플랫폼, Camunda 공식 홈페이지 </p>
+                                </div>
+                            </li>
+                            <br />
                                 <li>
                                     <strong>T사 프로젝트</strong> (2023.09 ~ 2023.11)
                                     <p>주요 업무: 트래픽 제어 및 PLC 제어 개발</p>
@@ -214,6 +263,15 @@ const ResumeCareer = () => {
                     </div>
                 </section>
             </div>
+            {/* 모달 */}
+            {isModalOpen && (
+                <div className="modal" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <span className="close" onClick={closeModal}>&times;</span>
+                        <img src={selectedImage} alt="Selected" className="modal-image" />
+                    </div>
+                </div>
+            )}
             <div className='button-container_resume'>
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/')}>돌아가기</button>
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumeSkill')}>상세 기술 보기</button>

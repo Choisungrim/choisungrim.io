@@ -4,7 +4,7 @@ import "./css/loading.css";
 
 const DROP_WIDTH = 10; // 드랍의 너비
 const FALL_SPEED = 13; // 떨어지는 속도
-const LOADING_INTERVAL = 600; // 로딩 바 속도
+const LOADING_INTERVAL = 500; // 로딩 바 속도
 const DROP_CREATION_INTERVAL = 5; // 드랍 생성 주기
 const MAX_DROP_MULTIPLIER = 10; // 최대 드랍 수 조정 배수
 
@@ -33,7 +33,7 @@ function Loading() {
 
     const timeout = setTimeout(() => {
       navigate(`/${nextPage}`);
-    }, 6000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);

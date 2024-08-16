@@ -131,6 +131,9 @@ const Profile = () => {
                     <p>성격: 친절하고 호기심이 많음</p>
                 </div>
             </div>
+            <div>
+                <div className="chatbot-button" onClick={() => navigate('/loading/test')}>메모장</div>
+            </div>
             <div className="button-container">
                 <div className="profile-image-small">
                     <img src={requestImageUrl} alt="내 이미지" style={{ width: '50px', borderRadius: '10px' }} />

@@ -6,6 +6,7 @@ import ResumeCareer from './resumeCareer';
 import ResumeSkill from './resumeSkill';
 import ResumePortfolio from './resumePortfolio';
 import Loading from './loading';
+import TEST from './test';
 import './App.css';
 
 const pageVariants = {
@@ -96,6 +97,20 @@ function App() {
                             transition={{ duration: 0.5 }}
                         >
                             <Loading />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/test"
+                    element={
+                        <motion.div
+                            initial="initial"
+                            animate="in"
+                            exit="out"
+                            variants={pageVariants}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <TEST />
                         </motion.div>
                     }
                 />

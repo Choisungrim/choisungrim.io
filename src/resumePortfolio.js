@@ -22,10 +22,10 @@ const ResumeCareer = () => {
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumeSkill')}>상세 기술 보기</button>
             </div>
             <div className="resume-container">
-                <h1 className="resume-title">프로젝트 상세 내용</h1>
+                <h1 className="resume-title">포트폴리오 상세 내용</h1>
 
                 <section className="resume-section">
-                    <h2>프로젝트 상세 내용</h2>
+                    <h2>포트폴리오 상세 내용</h2>
                     <div>
                         <li className="highlight">
                             <strong>프로그래밍 언어</strong>

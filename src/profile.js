@@ -69,7 +69,7 @@ const Profile = () => {
             <div style={{ whiteSpace: 'pre-line', fontFamily: 'inherit' }}>
                 <div className="chatbot-button" onClick={() => sendMessage('Career')}>내 경력이 궁금해?</div>
                 <div className="chatbot-button" onClick={() => sendMessage('Skill')}>내 기술이 궁금해?</div>
-                {/* <div className="chatbot-button" onClick={() => sendMessage('Portfolio')}>내 포폴이 궁금해?</div> */}
+                <div className="chatbot-button" onClick={() => sendMessage('Portfolio')}>내 포폴이 궁금해?</div>
             </div>
         );
     }
@@ -141,7 +141,7 @@ const Profile = () => {
                         <div className="button-area">
                             <div className="chatbot-button" onClick={() => sendMessage('Career')}>내 경력이 궁금해?</div>
                             <div className="chatbot-button" onClick={() => sendMessage('Skill')}>내 기술이 궁금해?</div>
-                            {/* <div className="chatbot-button" onClick={() => sendMessage('Portfolio')}>내 포폴이 궁금해?</div> */}
+                            <div className="chatbot-button" onClick={() => sendMessage('Portfolio')}>내 포폴이 궁금해?</div>
                         </div>
                     </div>
                 </div>

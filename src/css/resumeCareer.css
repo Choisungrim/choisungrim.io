@@ -62,8 +62,15 @@
 }
 
 .inline-image {
-    width: 14vw  ; /* 원하는 너비로 설정 */
-    height: 15vh; /* 원하는 높이로 설정 */
+    width: 13vw  ; /* 원하는 너비로 설정 */
+    height: 10vh; /* 원하는 높이로 설정 */
+    object-fit: cover; /* 비율 유지하며 잘라내기 */
+    cursor: pointer; /* 클릭할 수 있음을 나타내는 커서 */
+}
+
+.inline-image_one {
+    width: 13vw  ; /* 원하는 너비로 설정 */
+    height: 13vh; /* 원하는 높이로 설정 */
     object-fit: cover; /* 비율 유지하며 잘라내기 */
     cursor: pointer; /* 클릭할 수 있음을 나타내는 커서 */
 }

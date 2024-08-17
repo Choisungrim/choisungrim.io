@@ -5,8 +5,15 @@ import ParkerImage from './resource/parker.jpg';
 import ParkerLayoutImage from './resource/parker_layout.png';
 import AmoreImage from './resource/amore.jpg';
 import AmoreFms from './resource/amore_fms.jpg';
+import Samjin from './resource/samjin.jpg';
 import FmsMain from './resource/fmsMain.jpg';
 import Camunda from './resource/camunda.png';
+import Thermofisher from './resource/thermofisher.png';
+import Shinsung from './resource/shinsung.jpg';
+import Cjproject from './resource/cjproject.png';
+import Disher from './resource/disher.jpg';
+import Hyundai from './resource/hyundai.jpg';
+import Minefluencer from './resource/minefluencer.png';
 
 const ResumeCareer = () => {
     const navigate = useNavigate();
@@ -116,6 +123,10 @@ const ResumeCareer = () => {
                                         </ol>
                                     </li>
                                 </div>
+                                <div className="image-container">
+                                    <img src={Samjin} alt="Samjin" className="inline-image_one" onClick={() => openModal(Samjin)} />
+                                    <p>출처 : 다음 MBN </p>
+                                </div>
                             </li>
                             <br />
                             <li className="flex-container">
@@ -141,80 +152,131 @@ const ResumeCareer = () => {
                                 </div>
                             </li>
                             <br />
-                                <li>
-                                    <strong>T사 프로젝트</strong> (2023.09 ~ 2023.11)
-                                    <p>주요 업무: 트래픽 제어 및 PLC 제어 개발</p>
-                                    <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, TCP Socket, Camunda</p>
-                                    <p>프로젝트 성과: 트래픽 관리 및 제어 시스템 개발 및 리포트 고도화</p>
-                                    <strong>해결 방안</strong>
-                                    <ol>
-                                        <li>PLC 제어 시스템을 설계 및 구현하여 로봇움직임에 설비를 제어, 트래픽 관리의 정확도를 높임</li>
-                                        <li>데이터 분석을 통해 예측 가능한 트래픽 흐름 구현</li>
-                                        <li>리포트를 세분화 하고 구간별 시간의 파악을 통해 정확한 데이터 분석 쿼리 튜닝</li>
-                                    </ol>
-                                </li>
+                            <li className="flex-container">
+                                <div className="text-content">
+                                    <li>
+                                        <strong>T사 프로젝트</strong> (2023.09 ~ 2023.11)
+                                        <p>주요 업무: 트래픽 제어 및 PLC 제어 개발</p>
+                                        <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, TCP Socket, Camunda</p>
+                                        <p>프로젝트 성과: 신규 FMS 적용, 트래픽 관리 및 제어 시스템 개발 및 리포트 고도화</p>
+                                        <strong>해결 방안</strong>
+                                        <ol>
+                                            <li>PLC 제어 시스템을 설계 및 구현하여 로봇움직임에 설비를 제어, 트래픽 관리의 정확도를 높임</li>
+                                            <li>데이터 분석을 통해 예측 가능한 트래픽 흐름 구현</li>
+                                            <li>리포트를 세분화 하고 구간별 시간의 파악을 통해 정확한 데이터 분석 쿼리 튜닝</li>
+                                        </ol>
+                                    </li>
+                                </div>
+                                <div className="image-container">
+                                    <img src={Thermofisher} alt="Thermofisher" className="inline-image_one" onClick={() => openModal(Thermofisher)} />
+                                    <p>출처 : 에이빙 뉴스 </p>
+                                </div>
+                            </li>
                                 <br />
-                                <li>
-                                    <strong>S사 대리점 개발</strong> (2023.11 ~ 2024.01)
-                                    <p>주요 업무: 외부 API 개발 및 서비스 모듈화</p>
-                                    <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, TCP Socket, Camunda</p>
-                                    <p>프로젝트 성과: API 통합 및 서비스 모듈화로 시스템 확장성 증대</p>
-                                    <strong>해결 방안</strong>
-                                    <ol>
-                                        <li>외부 API 통합을 위한 표준화된 인터페이스 설계로 데이터 흐름의 일관성 확보</li>
-                                        <li>서비스 모듈화를 통해 각 기능의 독립성을 강화하여 유지보수 용이성 증대</li>
-                                        <li>API 성능 모니터링을 통해 병목 현상을 사전에 식별하고 최적화 작업 수행</li>
-                                    </ol>
-                                </li>
+                            <li className="flex-container">
+                                <div className="text-content">
+                                    <li>
+                                        <strong>S사 대리점 개발</strong> (2023.11 ~ 2024.01)
+                                        <p>주요 업무: 외부 API 개발 및 서비스 모듈화</p>
+                                        <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, TCP Socket, Camunda</p>
+                                        <p>프로젝트 성과: API 통합 및 서비스 모듈화로 시스템 확장성 증대</p>
+                                        <strong>해결 방안</strong>
+                                        <ol>
+                                            <li>외부 API 통합을 위한 표준화된 인터페이스 설계로 데이터 흐름의 일관성 확보</li>
+                                            <li>서비스 모듈화를 통해 각 기능의 독립성을 강화하여 유지보수 용이성 증대</li>
+                                            <li>API 성능 모니터링을 통해 병목 현상을 사전에 식별하고 최적화 작업 수행</li>
+                                        </ol>
+                                    </li>
+                                </div>
+                                <div className="image-container">
+                                    <img src={Shinsung} alt="Shinsung" className="inline-image_one" onClick={() => openModal(Shinsung)} />
+                                    <p>출처 : </p>
+                                </div>
+                            </li>
                                 <br />
-                                <li>
-                                    <strong>C사 프로젝트</strong> (2024.02 ~ 2024.03)
-                                    <p>주요 업무: 배포버전 개발 및 오더 관리</p>
-                                    <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, Camunda</p>
-                                    <p>프로젝트 성과: 오더 관리 체계 구축 및 프로세스 관리 효율성 향상</p>
-                                    <strong>해결 방안</strong>
-                                    <ol>
-                                        <li>오더 관리 시스템을 설계하여 프로세스 효율성 향상</li>
-                                        <li>실시간 데이터 분석을 통해 관리 체계 강화</li>
-                                    </ol>
-                                </li>
+                            <li className="flex-container">
+                                <div className="text-content">  
+                                    <li>
+                                        <strong>C사 프로젝트</strong> (2024.02 ~ 2024.03)
+                                        <p>주요 업무: 배포버전 개발 및 오더 관리</p>
+                                        <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, Camunda</p>
+                                        <p>프로젝트 성과: 오더 관리 체계 구축 및 프로세스 관리 효율성 향상</p>
+                                        <strong>해결 방안</strong>
+                                        <ol>
+                                            <li>오더 관리 시스템을 설계하여 프로세스 효율성 향상</li>
+                                            <li>실시간 데이터 분석을 통해 관리 체계 강화</li>
+                                        </ol>
+                                    </li>
+                                </div>
+                                <div className="image-container">
+                                    <img src={Cjproject} alt="Cjproject" className="inline-image_one" onClick={() => openModal(Cjproject)} />
+                                    <p>출처 : Thirarobotics Linked in  </p>
+                                </div>
+                            </li>
                                 <br />
-                                <li>
-                                    <strong>FMS 솔루션 배포</strong> (2024.02 ~ 2024.04)
-                                    <p>주요 업무: Docker를 이용한 FMS 솔루션 배포 환경 구성</p>
-                                    <p>사용 기술: Docker, Docker Compose</p>
-                                    <p>프로젝트 성과: FMS 솔루션 컨테이너화 및 배포 자동화</p>
-                                    <strong>해결 방안</strong>
-                                    <ol>
-                                        <li>Docker와 Docker Compose를 활용하여 배포 환경 자동화</li>
-                                        <li>유지보수 용이성 증대</li>
-                                    </ol>
-                                </li>
+                            <li className="flex-container">
+                                <div className="text-content">  
+                                    <li>
+                                        <strong>FMS 솔루션 배포</strong> (2024.02 ~ 2024.04)
+                                        <p>주요 업무: Docker를 이용한 FMS 솔루션 배포 환경 구성</p>
+                                        <p>사용 기술: Docker, Docker Compose</p>
+                                        <p>프로젝트 성과: FMS 솔루션 컨테이너화 및 배포 자동화</p>
+                                        <strong>해결 방안</strong>
+                                        <ol>
+                                            <li>Docker와 Docker Compose를 활용하여 배포 환경 자동화</li>
+                                            <li>NSIS, window installer를 이용한 easy setup</li>
+                                            <li>유지보수 용이성 증대</li>
+                                        </ol>
+                                    </li>
+                                </div>
+                                <div className="image-container">
+                                    <img src={Disher} alt="Disher" className="inline-image_one" onClick={() => openModal(Disher)} />
+                                    <p>출처 : Disher Linked in  </p>
+                                </div>
+                            </li>
                                 <br />
-                                <li>
-                                    <strong>H사 프로젝트</strong> (2024.06 ~ 2024.07)
-                                    <p>주요 업무: 시나리오 통합 관리 및 차량 순회 로직 개발</p>
-                                    <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, Camunda</p>
-                                    <p>프로젝트 성과: 차량 순회 관리 및 절전 모드 개발</p>
-                                    <strong>해결 방안</strong>
-                                    <ol>
-                                        <li>차량 순회의 효율성을 높이기 위해 최적화된 알고리즘 개발</li>
-                                        <li>절전 모드를 통해 에너지 소비 절감 솔루션 구현</li>
-                                    </ol>
-                                </li>
+                            <li className="flex-container">
+                                <div className="text-content">  
+                                    <li>
+                                        <strong>H사 프로젝트</strong> (2024.06 ~ 2024.07)
+                                        <p>주요 업무: 시나리오 통합 관리 및 차량 순회 로직 개발</p>
+                                        <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, Camunda</p>
+                                        <p>프로젝트 성과: 차량 순회 관리 및 절전 모드 개발</p>
+                                        <strong>해결 방안</strong>
+                                        <ol>
+                                            <li>차량 순회의 효율성을 높이기 위해 최적화된 알고리즘 개발</li>
+                                            <li>절전 모드를 통해 에너지 소비 절감 솔루션 구현</li>
+                                        </ol>
+                                    </li>
+                                </div>
+                                <div className="image-container">
+                                    <img src={Hyundai} alt="Hyundai" className="inline-image_one" onClick={() => openModal(Hyundai)} />
+                                    <p>출처 : TheGuru Global뉴스 </p>
+                                </div>
+                            </li>
                             </ol>
                         </li>
 
                         <li className="highlight">
                             <strong>(주)프로그래밍교육센터</strong> - 교육 (2022/01 - 2022/07)
                             <ol>
-                                <li>
-                                    <strong>MineFluencer 웹 페이지 개발</strong> (2022.04 ~ 2022.08)
-                                    <p>주요 업무: UI 기능 개발, AWS 서버 구축 및 패키징 배포 관리</p>
-                                    <p>사용 기술: Java, Mybatis, JavaScript, MySQL, AWS EC2, Linux, Maven</p>
-                                    <p>프로젝트 성과: Google API를 활용한 데이터 수집 및 업데이트 시스템 구축</p>
-                                    <p>해결 방안: AWS EC2를 통해 안정적인 서버 환경을 구성, Google API를 활용하여 데이터 수집 및 업데이트 프로세스를 자동화하여 효율성을 높힘.</p>
-                                    <p>산출물: <a href="https://github.com/Minefluencer/MineFluencer">GitHub 링크</a></p>
+                                <li className="flex-container">
+                                    <div className="text-content">
+                                        <ol>
+                                            <li>
+                                                <strong>MineFluencer 웹 페이지 개발</strong> (2022.04 ~ 2022.08)
+                                                <p>주요 업무: UI 기능 개발, AWS 서버 구축 및 패키징 배포 관리</p>
+                                                <p>사용 기술: Java, Mybatis, JavaScript, MySQL, AWS EC2, Linux, Maven</p>
+                                                <p>프로젝트 성과: Google API를 활용한 데이터 수집 및 업데이트 시스템 구축</p>
+                                                <p>해결 방안: AWS EC2를 통해 안정적인 서버 환경을 구성, Google API를 활용하여 데이터 수집 및 업데이트 프로세스를 자동화하여 효율성을 높힘.</p>
+                                                <p>산출물: <a href="https://github.com/Minefluencer/MineFluencer">GitHub 링크</a></p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <div className="image-container">
+                                        <img src={Minefluencer} alt="Minefluencer" className="inline-image_one" onClick={() => openModal(Minefluencer)} />
+                                        <p>출처 : </p>
+                                    </div>
                                 </li>
                             </ol>
                         </li>

@@ -3,14 +3,29 @@ import { useNavigate  } from 'react-router-dom';
 import './styles.css';
 import requestImageUrl from './resource/request.jpg';
 import responseImageUrl from './resource/response.jpg';
+import MemoPage from './memo.js'; // MemoPage 컴포넌트 임포트
 
 const Profile = () => {
     const [messages, setMessages] = useState([]);
-    const navigate = useNavigate (); // useHistory 훅을 사용하여 페이지 이동
+    const [isMemoVisible, setIsMemoVisible] = useState(false);
 
+    const navigate = useNavigate (); // useHistory 훅을 사용하여 페이지 이동
+    
     useEffect(() => {
         document.title = 'portfolio'; // 문서 제목 설정
     }, []);
+    
+    const toggleMemo = () => {
+        console.log('MemoPage가 렌더링되었습니다.');
+        setIsMemoVisible(!isMemoVisible);
+        const mainContainer = document.querySelector('.main_container');
+
+        if (!isMemoVisible) {
+            mainContainer.classList.add('shifted'); // 메모 페이지가 열릴 때 클래스를 추가
+        } else {
+            mainContainer.classList.remove('shifted'); // 메모 페이지가 닫힐 때 클래스를 제거
+        }
+    };
 
     const sendMessage = (type) => {
         setTimeout(() => {
@@ -130,9 +145,11 @@ const Profile = () => {
                     <p>나이: 29세</p>
                     <p>성격: 친절하고 호기심이 많음</p>
                 </div>
-            </div>
-            <div>
-                <div className="chatbot-button" onClick={() => navigate('/loading/memo')}>메모장</div>
+                <div className="memo-button">
+                    <div className="chatbot-button" onClick={toggleMemo}>
+                        {isMemoVisible ? '<' : '>'}
+                    </div>
+                </div>
             </div>
             <div className="button-container">
                 <div className="profile-image-small">
@@ -145,7 +162,9 @@ const Profile = () => {
                         </div>
                     </div>
                 </div>
+                
             </div>
+
             {/* 메시지를 표시할 영역 */}
             <div id="responseArea" className="response-area">
                 {messages.map((message, index) => (
@@ -157,8 +176,16 @@ const Profile = () => {
                     </div>
                 ))}
             </div>
+
+            {/* 메모 페이지 표시 영역 */}
+            {isMemoVisible && (
+                <div className="memo-container">
+                    <MemoPage />
+                </div>
+            )}
         </div>
     );
 };
+
 
 export default Profile; // 기본 내보내기

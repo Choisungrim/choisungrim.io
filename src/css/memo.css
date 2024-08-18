@@ -1,39 +1,25 @@
 .app-container {
-    max-width: 800px; /* 최대 너비 설정 */
-    margin: 0 auto; /* 가운데 정렬 */
-    padding: 20px; /* 여백 추가 */
-    border: 1px solid #ccc; /* 테두리 추가 */
-    border-radius: 8px; /* 모서리 둥글게 */
-    background-color: #f9f9f9; /* 배경 색상 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.records-container {
+  display: flex;
+  align-items: flex-start; /* 상단 정렬 */
+}
+
+.record-section {
+  margin-right: 20px; /* 오른쪽 여백 */
+}
+
+.saved-section {
+  border-left: 1px solid #ccc; /* 구분선 */
+  padding-left: 20px; /* 왼쪽 패딩 */
+}
+
+@media (max-width: 600px) {
+  .memo-page {
+      width: 100%; /* 작은 화면에서의 설정 */
   }
-  
-  h1 {
-    text-align: center; /* 제목 가운데 정렬 */
-  }
-  
-  input {
-    width: calc(100% - 22px); /* 입력 필드 너비 조정 */
-    padding: 10px; /* 여백 추가 */
-    margin-bottom: 10px; /* 아래 여백 추가 */
-    border: 1px solid #ccc; /* 테두리 */
-    border-radius: 4px; /* 모서리 둥글게 */
-  }
-  
-  button {
-    margin-right: 5px; /* 버튼 간격 추가 */
-  }
-  
-  .records-container {
-    display: flex; /* 가로 방향으로 배치 */
-    justify-content: space-between; /* 공간 균등 분배 */
-  }
-  
-  .record-section, .saved-section {
-    flex: 1; /* 각 섹션이 같은 비율로 차지 */
-    margin: 0 10px; /* 섹션 간격 추가 */
-  }
-  
-  h2 {
-    text-align: left; /* 섹션 제목 왼쪽 정렬 */
-  }
-  
+}

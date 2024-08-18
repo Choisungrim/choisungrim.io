@@ -7,22 +7,35 @@ import ResumeSkill from './resumeSkill';
 import Ready from './ready';
 import Loading from './loading';
 import Memo from './memo';
+// import NotFound from './NotFound'; // 404 페이지
 import './App.css';
 
 const pageVariants = {
     initial: {
-        scale: 0.2, // 시작할 때 크기
+        scale: 0.2,
         opacity: 0,
     },
     in: {
-        scale: 1, // 최종 크기
+        scale: 1,
         opacity: 1,
     },
     out: {
-        scale: 0.2, // 종료할 때 크기
+        scale: 0.2,
         opacity: 0,
     },
 };
+
+const AnimatedRoute = ({ component: Component }) => (
+    <motion.div
+        initial="initial"
+        animate="in"
+        exit="out"
+        variants={pageVariants}
+        transition={{ duration: 0.5 }}
+    >
+        <Component />
+    </motion.div>
+);
 
 function App() {
     const location = useLocation();
@@ -30,90 +43,13 @@ function App() {
     return (
         <AnimatePresence>
             <Routes location={location} key={location.key}>
-                <Route
-                    path="/"
-                    element={
-                        <motion.div
-                            initial="initial"
-                            animate="in"
-                            exit="out"
-                            variants={pageVariants}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <Profile />
-                        </motion.div>
-                    }
-                />
-                <Route
-                    path="/resumeCareer"
-                    element={
-                        <motion.div
-                            initial="initial"
-                            animate="in"
-                            exit="out"
-                            variants={pageVariants}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <ResumeCareer />
-                        </motion.div>
-                    }
-                />
-                <Route
-                    path="/resumeSkill"
-                    element={
-                        <motion.div
-                            initial="initial"
-                            animate="in"
-                            exit="out"
-                            variants={pageVariants}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <ResumeSkill />
-                        </motion.div>
-                    }
-                />
-                <Route
-                    path="/ready"
-                    element={
-                        <motion.div
-                            initial="initial"
-                            animate="in"
-                            exit="out"
-                            variants={pageVariants}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <Ready />
-                        </motion.div>
-                    }
-                />
-                <Route
-                    path="/loading/:nextPage"
-                    element={
-                        <motion.div
-                            initial="initial"
-                            animate="in"
-                            exit="out"
-                            variants={pageVariants}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <Loading />
-                        </motion.div>
-                    }
-                />
-                <Route
-                    path="/memo"
-                    element={
-                        <motion.div
-                            initial="initial"
-                            animate="in"
-                            exit="out"
-                            variants={pageVariants}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <Memo />
-                        </motion.div>
-                    }
-                />
+                <Route path="/" element={<AnimatedRoute component={Profile} />} />
+                <Route path="/resumeCareer" element={<AnimatedRoute component={ResumeCareer} />} />
+                <Route path="/resumeSkill" element={<AnimatedRoute component={ResumeSkill} />} />
+                <Route path="/ready" element={<AnimatedRoute component={Ready} />} />
+                <Route path="/loading/:nextPage" element={<AnimatedRoute component={Loading} />} />
+                <Route path="/memo" element={<AnimatedRoute component={Memo} />} />
+                {/* <Route path="*" element={<AnimatedRoute component={NotFound} />} /> 404 페이지 */}
             </Routes>
         </AnimatePresence>
     );

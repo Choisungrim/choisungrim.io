@@ -44,7 +44,7 @@ const ResumeCareer = () => {
             <div className='button-container_resume'>
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/')}>돌아가기</button>
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumeSkill')}>상세 기술 보기</button>
-                <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumePortfolio')}>상세 포폴 보기</button>
+                <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/ready')}>상세 포폴 보기</button>
             </div>
             <div className="resume-container">
                 <h1 className="resume-title">경력 상세 내용</h1>
@@ -338,7 +338,7 @@ const ResumeCareer = () => {
             <div className='button-container_resume'>
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/')}>돌아가기</button>
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumeSkill')}>상세 기술 보기</button>
-                <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/resumePortfolio')}>상세 포폴 보기</button>
+                <button className='chatbot-button_resume' onClick={() => handleNavigate('/loading/ready')}>상세 포폴 보기</button>
             </div>
         </div>
     );

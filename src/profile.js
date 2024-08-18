@@ -58,7 +58,7 @@ const Profile = () => {
         return (
             <div style={{ whiteSpace: 'pre-line', fontFamily: 'inherit' }}>
                 {pofolioText}
-                <div className="chatbot-button" onClick={() => navigate('/loading/resumePortfolio')}>상세 포폴 보기</div>
+                <div className="chatbot-button" onClick={() => navigate('/loading/ready')}>상세 포폴 보기</div>
                 <div className="chatbot-button" onClick={resetChat}>처음으로 돌아가기</div>
             </div>
         );
@@ -132,7 +132,7 @@ const Profile = () => {
                 </div>
             </div>
             <div>
-                <div className="chatbot-button" onClick={() => navigate('/loading/test')}>메모장</div>
+                <div className="chatbot-button" onClick={() => navigate('/loading/memo')}>메모장</div>
             </div>
             <div className="button-container">
                 <div className="profile-image-small">

@@ -77,7 +77,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <h1>메모장 테스트</h1>
+      <h1>메모장</h1>
       <input
         type="text"
         value={inputValue}

@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Profile from './profile';
 import ResumeCareer from './resumeCareer';
 import ResumeSkill from './resumeSkill';
-import ResumePortfolio from './resumePortfolio';
+import Ready from './ready';
 import Loading from './loading';
-import TEST from './test';
+import Memo from './memo';
 import './App.css';
 
 const pageVariants = {
@@ -73,7 +73,7 @@ function App() {
                     }
                 />
                 <Route
-                    path="/resumeportfolio"
+                    path="/ready"
                     element={
                         <motion.div
                             initial="initial"
@@ -82,7 +82,7 @@ function App() {
                             variants={pageVariants}
                             transition={{ duration: 0.5 }}
                         >
-                            <ResumePortfolio />
+                            <Ready />
                         </motion.div>
                     }
                 />
@@ -101,7 +101,7 @@ function App() {
                     }
                 />
                 <Route
-                    path="/test"
+                    path="/memo"
                     element={
                         <motion.div
                             initial="initial"
@@ -110,7 +110,7 @@ function App() {
                             variants={pageVariants}
                             transition={{ duration: 0.5 }}
                         >
-                            <TEST />
+                            <Memo />
                         </motion.div>
                     }
                 />

@@ -19,25 +19,119 @@ const ResumeCareer = () => {
     const navigate = useNavigate();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
+    const [imageDescription, setImageDescription] = useState('');
+
+    const imagesWithDescriptions = {
+        ParkerImage: {
+            description: "P사 FMS 시스템 구축: AMR 제어 솔루션 개발\n " + 
+            "사용 기술: Python, TCP Socket, MQTT, PostgreSQL.\n"+
+            "성과: AMR 통신 최적화 및 실시간 모니터링 개선,\n"+
+            "회전 오류 발생률 30% 감소.",
+            src: ParkerImage,
+        },
+        ParkerLayoutImage: {
+            description: "경로 모니터링 UI 개발",
+            src: ParkerLayoutImage,
+        },
+        AmoreImage: {
+            description: "UR, Conveyor등 이기종 제어 개발",
+            src: AmoreImage,
+        },
+        AmoreFms: {
+            description: "A사 FMS 시스템 구축: PLC신호 제어 솔루션 개발\n"
+            +"사용 기술: Python, OPC_UA(Milo), MQTT, PostgreSQL \n"
+            +"성과: 로봇 별 작업 최적화 및 충전 기준 정의 설계 및 구현 \n"
+            +"구간 별 병목현상 제어 최적화",
+            src: AmoreFms,
+        },
+        Samjin: {
+            description: "G사 POC: 물류 창고 키팅 솔루션 개발 \n"
+            +"사용 기술: SpringBoot, Java, Oracle, RabbitMQ, MQTT, Python, PostgreSQL \n"
+            +"성과: 로봇을 이용한 물류 키팅 가능성 제시 \n"
+            +"보충, 키팅, 검수 등의 프로세스를 로봇을 통해 자동화",
+            src: Samjin,
+        },
+        FmsMain: {
+            description: "FMS Version Upgrade \n"
+            +"사용 기술: Spring FrameWork, Java, MariaDB, RabbitMQ, MQTT, Camunda\n"
+            +"성과: UI/UX개선 및 인터페이스 설계 및 구현,\n"
+            +"사용자가 비 코딩을 통해 업무 프로세스를 구현하여 사용할 수 있도록\n"
+            +"ProcessAPI를 설계 및 구현",
+            src: FmsMain,
+        },
+        Camunda: {
+            description: "Business Process Modeling Notation을 통해\n"
+            +"사용자가 설계하여 코드를 추가할 필요 없이 시스템에 동작하는\n"
+            +"API를 연결하여 이를 통해, 반송 및 충전등의 시나리오를 수행, \n"
+            +"유지보수 및 변경사항에 대해 유동적인 대처 가능",
+            src: Camunda,
+        },
+        Thermofisher: {
+            description: "T사 FMS 시스템 구축: 트래픽 관리, 제어 시스템 개발 및 리포트 고도화\n"
+            +"사용 기술: Spring FrameWork, Java, MariaDB, RabbitMQ, MQTT, Camunda, OPC_UA\n"
+            +"성과: PLC 제어를 통한 Speed Door 제어 안정성 확보\n"
+            +"현장상황에 맞게 프로세스를 설계 및 구현 회수 시나리오, 진행 중 대기 시나리오 구현,\n"
+            +"리포트 고도화 및 반송에 대한 구간별 상세 리포트 구현",
+            src: Thermofisher,
+        },
+        Shinsung: {
+            description: "신성 이미지 설명",
+            src: Shinsung,
+        },
+        Cjproject: {
+            description: "CJ 프로젝트 이미지 설명",
+            src: Cjproject,
+        },
+        Disher: {
+            description: "디셔 이미지 설명",
+            src: Disher,
+        },
+        Hyundai: {
+            description: "현대 이미지 설명",
+            src: Hyundai,
+        },
+        Minefluencer: {
+            description: "마인플루언서 이미지 설명",
+            src: Minefluencer,
+        },
+    };
+    
 
     useEffect(() => {
         document.title = 'portfolio'; // 문서 제목 설정
         window.scrollTo(0, 0); // 페이지가 로드될 때 스크롤을 맨 위로 이동
     }, []);
 
+    const handleMouseEnter = (image) => {
+        for (const key in imagesWithDescriptions) {
+            if (imagesWithDescriptions[key].src === image) {
+                setImageDescription(imagesWithDescriptions[key].description);
+                break;
+            }
+        }
+    };
+
+    const handleMouseLeave = () => {
+        setImageDescription();
+    };
+
     const handleNavigate = (path) => {
         navigate(path);
     };
 
     const openModal = (imageSrc) => {
-        setSelectedImage(imageSrc);
+        const selectedImage = imagesWithDescriptions[imageSrc];
         setIsModalOpen(true);
+        setSelectedImage(selectedImage.src);
     };
 
     const closeModal = () => {
         setIsModalOpen(false);
         setSelectedImage('');
+        setImageDescription();
     };
+
+    
 
     return (
         <div style={{ padding: '20px' }}>
@@ -82,8 +176,8 @@ const ResumeCareer = () => {
                                 </li>
                                 </div>
                                 <div className="image-container">
-                                    <img src={ParkerImage} alt="parker" className="inline-image" onClick={() => openModal(ParkerImage)} />
-                                    <img src={ParkerLayoutImage} alt="parker_layout" className="inline-image" onClick={() => openModal(ParkerLayoutImage)} />
+                                    <img src={ParkerImage} alt="parker" className="inline-image" onClick={() => openModal('ParkerImage')} />
+                                    <img src={ParkerLayoutImage} alt="parker_layout" className="inline-image" onClick={() => openModal('ParkerLayoutImage')} />
                                     <p>출처 : 티라로보틱스 유튜브 </p>
                                 </div>
                             </li>
@@ -94,7 +188,7 @@ const ResumeCareer = () => {
                                         <strong>A사 FMS 시스템 리빌딩</strong> (2022.08 ~ 2022.10)
                                         <p>주요 업무: PLC 신호 통신 및 트래픽 제어 구축</p>
                                         <p>사용 기술: Python, PLC, MQTT, PostgreSQL</p>
-                                        <p>프로젝트 성과: 트래픽 제어 효율성 향상</p>
+                                        <p>프로젝트 성과: 구간 별 병목현상 제어 최적화를 통한 트래픽 제어 효율성 향상</p>
                                         <strong>해결 방안</strong>
                                         <ol>
                                             <li>PLC 신호 통신을 최적화하여 작업의 효율성을 높임</li>
@@ -104,8 +198,8 @@ const ResumeCareer = () => {
                                     </li>
                                 </div>
                                 <div className="image-container">
-                                    <img src={AmoreImage} alt="amore" className="inline-image" onClick={() => openModal(AmoreImage)} />
-                                    <img src={AmoreFms} alt="amore_fms" className="inline-image" onClick={() => openModal(AmoreFms)} />
+                                    <img src={AmoreFms} alt="amore_fms" className="inline-image" onClick={() => openModal('AmoreFms')} />
+                                    <img src={AmoreImage} alt="amore" className="inline-image" onClick={() => openModal('AmoreImage')} />
                                     <p>출처 : 티라로보틱스 유튜브 </p>
                                 </div>
                             </li>
@@ -125,7 +219,7 @@ const ResumeCareer = () => {
                                     </li>
                                 </div>
                                 <div className="image-container">
-                                    <img src={Samjin} alt="Samjin" className="inline-image_one" onClick={() => openModal(Samjin)} />
+                                    <img src={Samjin} alt="Samjin" className="inline-image_one" onClick={() => openModal('Samjin')} />
                                     <p>출처 : 다음 MBN </p>
                                 </div>
                             </li>
@@ -147,8 +241,8 @@ const ResumeCareer = () => {
                                     </li>
                                 </div>
                                 <div className="image-container">
-                                    <img src={FmsMain} alt="fmsMain" className="inline-image" onClick={() => openModal(FmsMain)} />
-                                    <img src={Camunda} alt="camunda" className="inline-image" onClick={() => openModal(Camunda)} />
+                                    <img src={FmsMain} alt="fmsMain" className="inline-image" onClick={() => openModal('FmsMain')} />
+                                    <img src={Camunda} alt="camunda" className="inline-image" onClick={() => openModal('Camunda')} />
                                     <p>출처 : 로봇 자동화 협력 플랫폼, Camunda 공식 홈페이지 </p>
                                 </div>
                             </li>
@@ -169,7 +263,7 @@ const ResumeCareer = () => {
                                     </li>
                                 </div>
                                 <div className="image-container">
-                                    <img src={Thermofisher} alt="Thermofisher" className="inline-image_one" onClick={() => openModal(Thermofisher)} />
+                                    <img src={Thermofisher} alt="Thermofisher" className="inline-image_one" onClick={() => openModal('Thermofisher')} />
                                     <p>출처 : 에이빙 뉴스 </p>
                                 </div>
                             </li>
@@ -190,7 +284,7 @@ const ResumeCareer = () => {
                                     </li>
                                 </div>
                                 <div className="image-container">
-                                    <img src={Shinsung} alt="Shinsung" className="inline-image_one" onClick={() => openModal(Shinsung)} />
+                                    <img src={Shinsung} alt="Shinsung" className="inline-image_one" onClick={() => openModal('Shinsung')} />
                                     <p>출처 : </p>
                                 </div>
                             </li>
@@ -210,7 +304,7 @@ const ResumeCareer = () => {
                                     </li>
                                 </div>
                                 <div className="image-container">
-                                    <img src={Cjproject} alt="Cjproject" className="inline-image_one" onClick={() => openModal(Cjproject)} />
+                                    <img src={Cjproject} alt="Cjproject" className="inline-image_one" onClick={() => openModal('Cjproject')} />
                                     <p>출처 : Thirarobotics Linked in  </p>
                                 </div>
                             </li>
@@ -231,7 +325,7 @@ const ResumeCareer = () => {
                                     </li>
                                 </div>
                                 <div className="image-container">
-                                    <img src={Disher} alt="Disher" className="inline-image_one" onClick={() => openModal(Disher)} />
+                                    <img src={Disher} alt="Disher" className="inline-image_one" onClick={() => openModal('Disher')} />
                                     <p>출처 : Disher Linked in  </p>
                                 </div>
                             </li>
@@ -251,7 +345,7 @@ const ResumeCareer = () => {
                                     </li>
                                 </div>
                                 <div className="image-container">
-                                    <img src={Hyundai} alt="Hyundai" className="inline-image_one" onClick={() => openModal(Hyundai)} />
+                                    <img src={Hyundai} alt="Hyundai" className="inline-image_one" onClick={() => openModal('Hyundai')} />
                                     <p>출처 : TheGuru Global뉴스 </p>
                                 </div>
                             </li>
@@ -275,7 +369,7 @@ const ResumeCareer = () => {
                                         </ol>
                                     </div>
                                     <div className="image-container">
-                                        <img src={Minefluencer} alt="Minefluencer" className="inline-image_one" onClick={() => openModal(Minefluencer)} />
+                                        <img src={Minefluencer} alt="Minefluencer" className="inline-image_one" onClick={() => openModal('Minefluencer')} />
                                         <p>출처 : </p>
                                     </div>
                                 </li>
@@ -328,12 +422,26 @@ const ResumeCareer = () => {
             </div>
             {/* 모달 */}
             {isModalOpen && (
-                <div className="modal" onClick={closeModal}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <span className="close" onClick={closeModal}>&times;</span>
-                        <img src={selectedImage} alt="Selected" className="modal-image" />
+            <div className="modal" onClick={closeModal}>
+                <div className="imagebox" 
+                        onClick={closeModal}
+                        onMouseEnter={() => handleMouseEnter(selectedImage)} 
+                        onMouseLeave={handleMouseLeave}>
+                    <div className="close" onClick={closeModal}>&times;</div>
+                    <img 
+                        src={selectedImage} 
+                        alt="Selected" 
+                        className="modal-image" 
+                        
+                    />
+                    {imageDescription && (<div className="content" 
+                        onMouseEnter={() => handleMouseEnter(selectedImage)} 
+                        style={{ whiteSpace: 'pre-line' }}>
+                        {imageDescription}
                     </div>
+                    )}
                 </div>
+            </div>
             )}
             <div className='button-container_resume'>
                 <button className='chatbot-button_resume' onClick={() => handleNavigate('/')}>돌아가기</button>

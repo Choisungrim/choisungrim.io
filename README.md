@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+If you run parallel with 'oms' stored in different repositories and 
+run 'corsServer' in the master branch through 
+### `node express.mjs`, 
+you can run on a total of three servers and use uml Generator.
+
 ## Available Scripts
 
 In the project directory, you can run:

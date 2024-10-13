@@ -7,6 +7,7 @@ import ResumeSkill from './resumeSkill';
 import Ready from './ready';
 import Loading from './loading';
 import Memo from './memo';
+import UML from './uml';
 // import NotFound from './NotFound'; // 404 페이지
 import './App.css';
 
@@ -49,6 +50,7 @@ function App() {
                 <Route path="/ready" element={<AnimatedRoute component={Ready} />} />
                 <Route path="/loading/:nextPage" element={<AnimatedRoute component={Loading} />} />
                 <Route path="/memo" element={<AnimatedRoute component={Memo} />} />
+                <Route path="/uml" element={<AnimatedRoute component={UML} />} />
                 {/* <Route path="*" element={<AnimatedRoute component={NotFound} />} /> 404 페이지 */}
             </Routes>
         </AnimatePresence>

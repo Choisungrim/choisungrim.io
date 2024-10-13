@@ -161,6 +161,13 @@ body {
     transform: translateY(-10%); /* 수직 중앙 정렬을 위한 변환 */
     z-index: 10; /* 다른 요소 위에 표시되도록 */
 }
+.uml-button {
+    position: absolute; /* 절대 위치 설정 */
+    top: 20%; /* 수직 중앙 정렬 */
+    right: 10px; /* 오른쪽 끝에 배치 */
+    transform: translateY(-10%); /* 수직 중앙 정렬을 위한 변환 */
+    z-index: 10; /* 다른 요소 위에 표시되도록 */
+}
 
 .memo-container.show {
     transform: translateX(0); /* 보여줄 때의 위치 */

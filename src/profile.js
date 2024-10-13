@@ -16,7 +16,6 @@ const Profile = () => {
     }, []);
     
     const toggleMemo = () => {
-        console.log('MemoPage가 렌더링되었습니다.');
         setIsMemoVisible(!isMemoVisible);
         const mainContainer = document.querySelector('.main_container');
 
@@ -149,6 +148,9 @@ const Profile = () => {
                     <div className="chatbot-button" onClick={toggleMemo}>
                         {isMemoVisible ? '<' : '>'}
                     </div>
+                </div>
+                <div className="uml-button">
+                    <div className="chatbot-button" onClick={() => navigate('/loading/uml')}>uml페이지</div>
                 </div>
             </div>
             <div className="button-container">

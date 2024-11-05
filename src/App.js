@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Profile from './profile';
 import ResumeCareer from './resumeCareer';
 import ResumeSkill from './resumeSkill';
+import resumePortfolio from './resumePortfolio';
 import Ready from './ready';
 import Loading from './loading';
 import Memo from './memo';
@@ -47,6 +48,7 @@ function App() {
                 <Route path="/" element={<AnimatedRoute component={Profile} />} />
                 <Route path="/resumeCareer" element={<AnimatedRoute component={ResumeCareer} />} />
                 <Route path="/resumeSkill" element={<AnimatedRoute component={ResumeSkill} />} />
+                <Route path="/resumePortfolio" element={<AnimatedRoute component={resumePortfolio} />} />
                 <Route path="/ready" element={<AnimatedRoute component={Ready} />} />
                 <Route path="/loading/:nextPage" element={<AnimatedRoute component={Loading} />} />
                 <Route path="/memo" element={<AnimatedRoute component={Memo} />} />

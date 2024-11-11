@@ -115,8 +115,8 @@
 }
 
 .modal .imagebox{
-    width: 30vw;
-    height: 50vh;
+    width: 50vw;
+    height: 70vh;
     border-radius: inherit;
     display: flex;
     justify-content: center;

@@ -353,30 +353,6 @@ const ResumeCareer = () => {
                         </li>
 
                         <li className="highlight">
-                            <strong>(주)프로그래밍교육센터</strong> - 교육 (2022/01 - 2022/07)
-                            <ol>
-                                <li className="flex-container">
-                                    <div className="text-content">
-                                        <ol>
-                                            <li>
-                                                <strong>MineFluencer 웹 페이지 개발</strong> (2022.04 ~ 2022.08)
-                                                <p>주요 업무: UI 기능 개발, AWS 서버 구축 및 패키징 배포 관리</p>
-                                                <p>사용 기술: Java, Mybatis, JavaScript, MySQL, AWS EC2, Linux, Maven</p>
-                                                <p>프로젝트 성과: Google API를 활용한 데이터 수집 및 업데이트 시스템 구축</p>
-                                                <p>해결 방안: AWS EC2를 통해 안정적인 서버 환경을 구성, Google API를 활용하여 데이터 수집 및 업데이트 프로세스를 자동화하여 효율성을 높힘.</p>
-                                                <p>산출물: <a href="https://github.com/Minefluencer/MineFluencer">GitHub 링크</a></p>
-                                            </li>
-                                        </ol>
-                                    </div>
-                                    <div className="image-container">
-                                        <img src={Minefluencer} alt="Minefluencer" className="inline-image_one" onClick={() => openModal('Minefluencer')} />
-                                        <p>출처 : </p>
-                                    </div>
-                                </li>
-                            </ol>
-                        </li>
-
-                        <li className="highlight">
                             <strong>(주)시스게이트</strong> - 생명운영과 사원 (2019.09 ~ 2021.08)
                             <ol>
                                 <li>
@@ -414,7 +390,7 @@ const ResumeCareer = () => {
                         <p>저는 컴퓨터소프트웨어에 대한 열정을 바탕으로 지속적으로 성장하고 있는 개발자입니다.</p>
                         <p>대학 시절부터 프로그래밍 언어와 기술을 학습하며, Java와 Spring Framework를 통해 웹사이트 개발에 재미와 성취감을 느꼈습니다.</p>
                         <p>첫 직장에서는 서버 유지보수와 관리 업무를 담당하였으나, 개발 능력을 키우기 위해 6개월간 집중적으로 공부하였습니다.</p>
-                        <p>이후 티라로보틱스에서 솔루션개발팀으로 근무하며 다양한 프로젝트를 진행하였고, Message Queuing, Thread Safety, Camunda 등을 활용한 신규 솔루션 개발을 주도적으로 맡았습니다.</p>
+                        <p>이후 티라로보틱스에서 솔루션개발팀으로 근무하며 다양한 프로젝트를 진행하였고, Message Queuing, Camunda 등을 활용한 신규 솔루션 개발을 주도적으로 맡았습니다.</p>
                         <p>팀원들과의 협업을 통해 문제 해결 능력과 팀워크의 중요성을 깨달았습니다.</p>
                         <p>저의 강점은 새로운 기술을 빠르게 습득하고 이를 실무에 적용하는 능력이며, 경험이 부족한 부분에서는 꾸준히 학습하고 도전하는 자세를 유지하고 있습니다.</p>
                     </div>

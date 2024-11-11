@@ -144,17 +144,6 @@ const ResumeCareer = () => {
                 <h1 className="resume-title">경력 상세 내용</h1>
 
                 <section className="resume-section">
-                    <h2>개인 정보</h2>
-                    <div className="highlight">
-                        <p>이름: 최성림</p>
-                        <p>나이: 29세</p>
-                        <p>연락처: 010-7742-1587</p>
-                        <p>이메일: wowilos@naver.com</p>
-                        <p>최종학력: 동서울대학교 전문학사 / 학점은행제 컴퓨터공학 학사</p>
-                    </div>
-                </section>
-
-                <section className="resume-section">
                     <h2>경력 상세 내용</h2>
                     <div>
                         <li className="highlight">

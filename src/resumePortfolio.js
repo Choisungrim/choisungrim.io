@@ -73,7 +73,7 @@ const ResumeCareer = () => {
                                             <p>1-3. 담당 업무</p>
                                             <ol>
                                                 <p>Model-View-Controller 구조 설계 및 구현</p>
-                                                <p>API 기능 구현</p>
+                                                <p>순위, 회원가입, 조회, 추천, Mylist등 API 기능 구현</p>
                                                 <p>DB 설계 및 쿼리튜닝</p>
                                                 <p>AWS 서버를 이용한 배포 구성(EC2)</p>
                                             </ol>

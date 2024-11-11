@@ -140,11 +140,11 @@ const Profile = () => {
                     <img src={requestImageUrl} alt="내 이미지" style={{ width: '100%', borderRadius: '10px' }} />
                 </div>
                 <div className="message-area">
-                    <p>이름: 최성림</p>
-                    <p>나이: 29세</p>
-                    <p>연락처: 010-7742-1587</p>
-                    <p>이메일: wowilos@naver.com</p>
-                    <p>최종학력: 동서울대학교 전문학사 / 학점은행제 컴퓨터공학 학사</p>
+                    <h1>이름: 최성림</h1>
+                    <h3>나이: 29세</h3>
+                    <h3>연락처: 010-7742-1587</h3>
+                    <h3>이메일: wowilos@naver.com</h3>
+                    <h3>최종학력: 동서울대학교 전문학사 / 학점은행제 컴퓨터공학 학사</h3>
                 </div>
                 <div className="memo-button">
                     <div className="chatbot-button" onClick={toggleMemo}>

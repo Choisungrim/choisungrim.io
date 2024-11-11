@@ -156,12 +156,11 @@ const ResumeCareer = () => {
                                     <p>(2022.07 ~ 2022.09)</p>
                                     <p>주요 업무: AMR 연동 시스템 및 UI 개발, 네트워크 망 구축</p>
                                     <p>사용 기술: Python, TCP Socket, MQTT, PostgreSQL</p>
-                                    <p>프로젝트 성과: AMR 회전 문제 해결</p>
-                                    <strong>해결 방안</strong>
+                                    <strong>프로젝트 성과</strong>
                                     <ol>
                                         <li>AMR과의 원활한 통신을 위해 TCP Socket 및 MQTT 프로토콜을 활용하여 데이터 전송 및 수신을 위한 Client 개발</li>
                                         <li>UI에서의 피드백을 통해 실시간 모니터링을 최적화하여 표시 및 정확한 위치 파악</li>
-                                        <li>AMR의 위치에 따른 회전 문제를 특정 구간에서 회전을 못하도록 제어하여 회전 오류 발생률을 30% 감소시킴</li>
+                                        <li>AMR의 위치에 따른 회전 문제를 특정 구간에서 회전을 못하도록 제어하여 회전 오류 발생률을 50% 이상 감소시킴</li>
                                     </ol>
                                 </li>
                                 </div>
@@ -178,12 +177,11 @@ const ResumeCareer = () => {
                                         <strong>A사 FMS 시스템 리빌딩</strong> (2022.08 ~ 2022.10)
                                         <p>주요 업무: PLC 신호 통신 및 트래픽 제어 구축</p>
                                         <p>사용 기술: Python, PLC, MQTT, PostgreSQL</p>
-                                        <p>프로젝트 성과: 구간 별 병목현상 제어 최적화를 통한 트래픽 제어 효율성 향상</p>
-                                        <strong>해결 방안</strong>
+                                        <strong>프로젝트 성과</strong>
                                         <ol>
                                             <li>PLC 신호 통신을 최적화하여 작업의 효율성을 높임</li>
                                             <li>대기 시간에 따른 자동 충전 및 대기위치 이동 개발 및 process 설계</li>
-                                            <li>실시간 데이터 모니터링 시스템 구축으로 문제 발생 시 즉각 대처 가능</li>
+                                            <li>구간 별 병목현상 제어 최적화를 통한 트래픽 제어하여 작업의 효율성이 2배이상 향상 (작업설비 증가)</li>
                                         </ol>
                                     </li>
                                 </div>
@@ -200,11 +198,12 @@ const ResumeCareer = () => {
                                         <strong>WRS 개발 G사 POC</strong> (2022.11 ~ 2023.03)
                                         <p>주요 업무: WRS 솔루션 개발 및 로봇 메시징 프로토콜 구현</p>
                                         <p>사용 기술: Spring Boot, JPA, Mybatis, Oracle, MQTT, Java, JavaScript, RabbitMQ, Erlang</p>
-                                        <p>프로젝트 성과: 자동화된 창고 키팅 솔루션 개발</p>
-                                        <strong>해결 방안</strong>
+                                        <strong>프로젝트 성과</strong>
                                         <ol>
                                             <li>WRS 솔루션의 메시징 프로토콜 개선으로 로봇 간 효율적인 데이터 전송 보장</li>
-                                            <li>자동화된 피킹 프로세스를 통해 물류 현장 작업자의 속도를 40% 향상</li>
+                                            <li>기준정보성 데이터를 통해 로봇의 부분적 경로 개선</li>
+                                            <li>검수 및 보충 시퀀스 개발</li>
+                                            <li>자동화된 피킹 프로세스를 통해 물류 현장 작업 속도 30% 향상 (실제 Picking time 15분 이상소요 -> 10분 소요)</li>
                                         </ol>
                                     </li>
                                 </div>
@@ -220,13 +219,12 @@ const ResumeCareer = () => {
                                         <strong>FMS(Fleet Management System) Version Upgrade</strong> (2023.01 ~ 2023.07)
                                         <p>주요 업무: FMS 솔루션 개발 및 로봇 간 트래픽 제어</p>
                                         <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, TCP Socket, Camunda</p>
-                                        <p>프로젝트 성과: 자체 개발 (re branding)</p>
-                                        <strong>해결 방안</strong>
+                                        <strong>프로젝트 성과</strong>
                                         <ol>
                                             <li>사용자 피드백을 반영한 UI/UX 개선 작업을 통해 직관적인 인터페이스 구현</li>
-                                            <li>트래픽 제어 알고리즘 최적화를 통해 시스템 반응 속도 향상</li>
                                             <li>기존 python, PostgreSQL로 구현한 시스템을 Spring, MariaDB로 마이그레이션 및 포팅</li>
                                             <li>사용자가 비 코딩으로 업무 프로세스를 구현하여 로봇이 작동되게 외부 Process API를 Embedded 설계 및 구현</li>
+                                            <li>라이센스 구매비용 절감, 자사솔루션을 통한 프로젝트 진행으로 비즈니스적 성과 도출</li>
                                         </ol>
                                     </li>
                                 </div>
@@ -243,11 +241,10 @@ const ResumeCareer = () => {
                                         <strong>T사 프로젝트</strong> (2023.09 ~ 2023.11)
                                         <p>주요 업무: 트래픽 제어 및 PLC 제어 개발</p>
                                         <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, TCP Socket, Camunda</p>
-                                        <p>프로젝트 성과: 신규 FMS 적용, 트래픽 관리 및 제어 시스템 개발 및 리포트 고도화</p>
-                                        <strong>해결 방안</strong>
+                                        <strong>프로젝트 성과</strong>
                                         <ol>
-                                            <li>PLC 제어 시스템을 설계 및 구현하여 로봇움직임에 설비를 제어, 트래픽 관리의 정확도를 높임</li>
-                                            <li>데이터 분석을 통해 예측 가능한 트래픽 흐름 구현</li>
+                                            <li>PLC 제어 시스템을 설계 및 구현하여 로봇움직임에 스피드도어 제어, 트래픽 관리의 정확도를 높임</li>
+                                            <li>데이터 분석을 통해 예측 가능한 트래픽 흐름 구현 (구간에 따른 대기위치 구현)</li>
                                             <li>리포트를 세분화 하고 구간별 시간의 파악을 통해 정확한 데이터 분석 쿼리 튜닝</li>
                                         </ol>
                                     </li>
@@ -264,12 +261,10 @@ const ResumeCareer = () => {
                                         <strong>S사 대리점 개발</strong> (2023.11 ~ 2024.01)
                                         <p>주요 업무: 외부 API 개발 및 서비스 모듈화</p>
                                         <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, TCP Socket, Camunda</p>
-                                        <p>프로젝트 성과: API 통합 및 서비스 모듈화로 시스템 확장성 증대</p>
-                                        <strong>해결 방안</strong>
+                                        <strong>프로젝트 성과</strong>
                                         <ol>
-                                            <li>외부 API 통합을 위한 표준화된 인터페이스 설계로 데이터 흐름의 일관성 확보</li>
                                             <li>서비스 모듈화를 통해 각 기능의 독립성을 강화하여 유지보수 용이성 증대</li>
-                                            <li>API 성능 모니터링을 통해 병목 현상을 사전에 식별하고 최적화 작업 수행</li>
+                                            <li>외부 인력이 솔루션을 사용할 때, 서비스 부분을 수정하지 않고 라이브러리 형태로 제공하여 작업과 작업수행흐름만 수정하여 동작할 수 있도록 개선하여 유연성 증대</li>
                                         </ol>
                                     </li>
                                 </div>
@@ -285,11 +280,10 @@ const ResumeCareer = () => {
                                         <strong>C사 프로젝트</strong> (2024.02 ~ 2024.03)
                                         <p>주요 업무: 배포버전 개발 및 오더 관리</p>
                                         <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, Camunda</p>
-                                        <p>프로젝트 성과: 오더 관리 체계 구축 및 프로세스 관리 효율성 향상</p>
-                                        <strong>해결 방안</strong>
+                                        <strong>프로젝트 성과</strong>
                                         <ol>
-                                            <li>오더 관리 시스템을 설계하여 프로세스 효율성 향상</li>
-                                            <li>실시간 데이터 분석을 통해 관리 체계 강화</li>
+                                            <li>오더 관리 시스템을 설계, 구현하여 프로세스 효율성 향상</li>
+                                            <li>설비와의 PLC 통신을 통해 작업의 안정성 향상</li>
                                         </ol>
                                     </li>
                                 </div>
@@ -306,9 +300,9 @@ const ResumeCareer = () => {
                                         <p>주요 업무: Docker를 이용한 FMS 솔루션 배포 환경 구성</p>
                                         <p>사용 기술: Docker, Docker Compose</p>
                                         <p>프로젝트 성과: FMS 솔루션 컨테이너화 및 배포 자동화</p>
-                                        <strong>해결 방안</strong>
+                                        <strong>프로젝트 성과</strong>
                                         <ol>
-                                            <li>Docker와 Docker Compose를 활용하여 배포 환경 자동화</li>
+                                            <li>Docker와 Docker Compose, DockerHarbor를 활용하여 배포 환경 자동화 (Shell Script) </li>
                                             <li>NSIS, window installer를 이용한 easy setup</li>
                                             <li>유지보수 용이성 증대</li>
                                         </ol>
@@ -326,11 +320,10 @@ const ResumeCareer = () => {
                                         <strong>H사 프로젝트</strong> (2024.06 ~ 2024.07)
                                         <p>주요 업무: 시나리오 통합 관리 및 차량 순회 로직 개발</p>
                                         <p>사용 기술: Spring Framework, Mybatis, MariaDB, Java, JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, Camunda</p>
-                                        <p>프로젝트 성과: 차량 순회 관리 및 절전 모드 개발</p>
-                                        <strong>해결 방안</strong>
+                                        <strong>프로젝트 성과</strong>
                                         <ol>
-                                            <li>차량 순회의 효율성을 높이기 위해 최적화된 알고리즘 개발</li>
-                                            <li>절전 모드를 통해 에너지 소비 절감 솔루션 구현</li>
+                                            <li>단일 경로에서 차량을 순회시키기 위한 로직 개발</li>
+                                            <li>절전 모드 기능을 개발하여 로봇의 IO보드 부분과 통신, 에너지 소비 절감 서비스 구현</li>
                                         </ol>
                                     </li>
                                 </div>
@@ -348,9 +341,9 @@ const ResumeCareer = () => {
                                 <li>
                                     <strong>운영 및 유지보수 관제</strong>
                                     <p>주요 업무: 인프라 운영 및 유지보수, 이벤트 뷰어를 통한 시스템 및 애플리케이션 모니터링, 백업 관리</p>
-                                    <p>연봉: 2,545 만원</p>
-                                    <p>주요 직무: 유지보수</p>
-                                    <p>해결 방안: 시스템 모니터링 도구를 활용하여 인프라의 안정성을 높힘, 정기적인 백업 관리로 데이터 손실을 예방할 수 있는 체계를 구축</p>
+                                    <p>최종 연봉: 2,545 만원</p>
+                                    <p>주요 직무: 운영 및 유지보수</p>
+                                    <p>직무 성과: 시스템 모니터링 도구를 활용하여 인프라의 안정성을 높힘, 정기적인 백업 관리로 데이터 손실을 예방</p>
                                 </li>
                             </ol>
                         </li>

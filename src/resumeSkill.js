@@ -32,11 +32,11 @@ const ResumeCareer = () => {
                             <ol>
                                 <li>
                                     <strong>Python</strong>
-                                    <p> - 데이터 처리 및 서버 사이드 로직 구현 경험이 있으며, <strong>로봇 납품 프로젝트</strong>에서는 각 로봇별 작업 관리, 할당, 피드백 관리 및 PLC 프로토콜 연동을 통해 효율적인 작업 흐름을 구축하였음.</p>
+                                    <p> - 데이터 처리 및 서버 사이드 로직 구현 경험이 있으며, <strong>로봇 납품 프로젝트</strong>에서는 각 로봇별 작업 관리, 할당, 피드백 관리 및 PLC 프로토콜 연동을 통해 효율적인 작업 흐름을 구축.</p>
                                 </li>
                                 <li>
                                     <strong>Java</strong>
-                                    <p> - 애플리케이션 개발 및 서버 사이드 프로그래밍에 대한 이해를 바탕으로 <strong>로봇 관제 및 작업 관리</strong> 시스템을 개발하였으며, <br />기존 Python 시스템을 Java 기반의 Spring Framework로 포팅하여 성능을 개선하였음.</p>
+                                    <p> - 애플리케이션 개발 및 서버 사이드 프로그래밍에 대한 이해를 바탕으로 <strong>로봇 관제 및 작업 관리</strong> 시스템을 개발하였으며, <br />기존 Python 시스템을 Java 기반의 Spring Framework로 포팅하여 신규 자사솔루션으로 개발하였음.</p>
                                 </li>
                                 <li>
                                     <strong>JavaScript</strong>    

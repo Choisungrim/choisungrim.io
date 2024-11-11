@@ -31,6 +31,7 @@ const ResumeCareer = () => {
                         <p>나이: 29세</p>
                         <p>연락처: 010-7742-1587</p>
                         <p>이메일: wowilos@naver.com</p>
+                        <p>최종학력: 동서울대학교 전문학사 / 학점은행제 컴퓨터공학 학사</p>
                     </div>
                 </section>
 
@@ -67,7 +68,7 @@ const ResumeCareer = () => {
                                 </li>
                                 <li>
                                     <strong>Spring Framework</strong>
-                                    <p> - 마이크로서비스 아키텍처를 구현하였으며, <strong>Fleet Management System</strong>에서 다양한 외부 서비스와 통합하여 로봇과의 통신 및 비즈니스 프로세스를 가시화하였음.</p>
+                                    <p> - <strong>Fleet Management System</strong>에서 다양한 외부 서비스와 통합하여 로봇과의 통신 및 비즈니스 프로세스를 가시화하였음.</p>
                                 </li>
                                 <li>
                                     <strong>MyBatis</strong>
@@ -76,14 +77,6 @@ const ResumeCareer = () => {
                                 <li>
                                     <strong>Node.js</strong>
                                     <p> - 비동기 처리로 성능을 최적화하여 <strong>로봇 관리 프로그램</strong>을 구축하였고, 각 로봇의 상태 요소들을 호출하는 API를 개발하였음.</p>
-                                </li>
-                                <li>
-                                    <strong>Nest.js</strong>
-                                    <p> - 최신 프레임워크를 활용하여 효율적인 서버 측 애플리케이션을 개발한 경험이 있음.</p>
-                                </li>
-                                <li>
-                                    <strong>React</strong>
-                                    <p> - 사용자 인터페이스 구축 경험이 있으며, <strong>리포트 페이지 목업 개발</strong>을 통해 응답 속도를 약 5~10초 정도 향상시켰음.</p>
                                 </li>
                                 <li>
                                     <strong>Camunda</strong>
@@ -117,7 +110,7 @@ const ResumeCareer = () => {
                                 </li>
                                 <li>
                                     <strong>TCP Socket</strong>
-                                    <p> - 안정적인 데이터 전송을 위해 실시간 송수신을 구현하여 설비와의 연계성을 높였음.</p>
+                                    <p> - 설비 혹은 장비의 안정적인 데이터 전송을 위해 실시간 송수신을 구현하여 설비와의 연계성을 높였음.</p>
                                 </li>
                                 <li>
                                     <strong>RabbitMQ</strong>

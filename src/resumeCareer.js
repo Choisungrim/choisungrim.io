@@ -150,6 +150,7 @@ const ResumeCareer = () => {
                         <p>나이: 29세</p>
                         <p>연락처: 010-7742-1587</p>
                         <p>이메일: wowilos@naver.com</p>
+                        <p>최종학력: 동서울대학교 전문학사 / 학점은행제 컴퓨터공학 학사</p>
                     </div>
                 </section>
 
@@ -283,10 +284,10 @@ const ResumeCareer = () => {
                                         </ol>
                                     </li>
                                 </div>
-                                <div className="image-container">
+                                {/* <div className="image-container">
                                     <img src={Shinsung} alt="Shinsung" className="inline-image_one" onClick={() => openModal('Shinsung')} />
                                     <p>출처 : </p>
-                                </div>
+                                </div> */}
                             </li>
                                 <br />
                             <li className="flex-container">

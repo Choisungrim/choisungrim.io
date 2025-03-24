@@ -150,3 +150,20 @@
     transform: translate(-50%, -50%); */
 }
 
+.roadmap-image {
+    width: 100%;         /* 전체 너비 사용 */
+    height: auto;        /* 비율 유지 */
+    max-width: 1000px;   /* 필요시 최대 너비 제한 */
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .roadmap-image {
+      max-width: 100%;
+    }
+  }
+  

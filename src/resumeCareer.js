@@ -14,6 +14,7 @@ import Cjproject from './resource/cjproject.png';
 import Disher from './resource/disher.jpg';
 import Hyundai from './resource/hyundai.jpg';
 import Minefluencer from './resource/minefluencer.png';
+import RoadMap from './resource/roadmap.png';
 
 const ResumeCareer = () => {
     const navigate = useNavigate();
@@ -94,6 +95,10 @@ const ResumeCareer = () => {
             description: "마인플루언서 이미지 설명",
             src: Minefluencer,
         },
+        RoadMap:{
+            description: "이력서 이미지 설명",
+            src: RoadMap,   
+        }
     };
     
 
@@ -144,6 +149,9 @@ const ResumeCareer = () => {
                 <h1 className="resume-title">경력 상세 내용</h1>
 
                 <section className="resume-section">
+                    <div>
+                        <img src={RoadMap} alt="RoadMap" className="roadmap-image" onClick={() => openModal('RoadMap')} />
+                    </div>
                     <h2>경력 상세 내용</h2>
                     <div>
                         <li className="highlight">

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/choisungrim.io/static/css/main.c0339881.css",
-    "main.js": "/choisungrim.io/static/js/main.a83452c0.js",
+    "main.css": "/choisungrim.io/static/css/main.1fed479e.css",
+    "main.js": "/choisungrim.io/static/js/main.d99ed72b.js",
     "static/js/453.ed3810f9.chunk.js": "/choisungrim.io/static/js/453.ed3810f9.chunk.js",
     "static/media/minefluencer.png": "/choisungrim.io/static/media/minefluencer.4000631e69e9c5878899.png",
     "static/media/thermofisher.png": "/choisungrim.io/static/media/thermofisher.5102bba2c9fbae8f80e4.png",
@@ -11,6 +11,7 @@
     "static/media/cjproject.png": "/choisungrim.io/static/media/cjproject.1f255b496124d2f13647.png",
     "static/media/UMLGenerator.jpeg": "/choisungrim.io/static/media/UMLGenerator.4dd564b65ab69eb3a437.jpeg",
     "static/media/amore_fms.jpg": "/choisungrim.io/static/media/amore_fms.5fa855adade9dd2434f8.jpg",
+    "static/media/roadmap.png": "/choisungrim.io/static/media/roadmap.f4edfb7672b29337ef32.png",
     "static/media/Profile_Info.jpeg": "/choisungrim.io/static/media/Profile_Info.8878cc58caba02bb13cd.jpeg",
     "static/media/parker.jpg": "/choisungrim.io/static/media/parker.c516fdbb7ac362b22b2c.jpg",
     "static/media/camunda.png": "/choisungrim.io/static/media/camunda.2c2f10f4aafa38c88347.png",
@@ -22,12 +23,12 @@
     "static/media/amore.jpg": "/choisungrim.io/static/media/amore.4e60bee1b77438451f4b.jpg",
     "static/media/ready.gif": "/choisungrim.io/static/media/ready.3a7c445dc238513b80d3.gif",
     "index.html": "/choisungrim.io/index.html",
-    "main.c0339881.css.map": "/choisungrim.io/static/css/main.c0339881.css.map",
-    "main.a83452c0.js.map": "/choisungrim.io/static/js/main.a83452c0.js.map",
+    "main.1fed479e.css.map": "/choisungrim.io/static/css/main.1fed479e.css.map",
+    "main.d99ed72b.js.map": "/choisungrim.io/static/js/main.d99ed72b.js.map",
     "453.ed3810f9.chunk.js.map": "/choisungrim.io/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0339881.css",
-    "static/js/main.a83452c0.js"
+    "static/css/main.1fed479e.css",
+    "static/js/main.d99ed72b.js"
   ]
 }

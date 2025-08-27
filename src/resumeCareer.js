@@ -188,77 +188,93 @@ const ResumeCareer = () => {
           <h2>경력 상세 내용</h2>
           <div>
             <li className="highlight">
-              <strong>(주) 액스비스 </strong> - 로보틱스그룹 (2024/12/02 -
-              재직중)
+              <strong>(주) 액스비스</strong> - 로보틱스그룹 (2024.12 ~ 재직 중)
               <ol>
                 <li className="flex-container">
                   <div className="text-content">
-                    <li>
-                      <strong>ACS 통합 관제 시스템 백엔드 구축</strong>
-                      <p>(2024.01 ~ 진행 중)</p>
-                      <p>
-                        주요 업무: 통합 관제 시스템 백엔드 아키텍처 설계 및
-                        개발, 실시간 데이터 처리 구조 설계
-                      </p>
-                      <p>
-                        사용 기술: React, NestJS, Spring Boot, Java, MariaDB,
-                        MQTT, Redis, ElasticSearch, Logstash, Kibana
-                      </p>
-                      <strong>프로젝트 성과</strong>
-                      <ol>
-                        <li>
-                          React-NestJS-Spring Boot 기반의 신규 통합 관제 시스템
-                          아키텍처를 설계하고 백엔드 전반을 총괄 개발
-                        </li>
-                        <li>
-                          MQTT 기반 비동기 통신 구조를 도입하여 AMR 상태 및 작업
-                          데이터의 실시간 정합성 확보
-                        </li>
-                        <li>
-                          복잡한 로봇 작업 할당 로직의 성능 저하 이슈를 해결하기
-                          위해 쿼리 구조 재설계 및 Java Stream API를 활용한 코드
-                          최적화 수행
-                        </li>
-                        <li>
-                          RESTful API 설계 및 Redis 기반 세션/캐시 구조를 통해
-                          사용자 요청 응답 속도 및 시스템 안정성 향상
-                        </li>
-                      </ol>
-                    </li>
+                    <strong>ACS 통합 관제 시스템 설계 및 백엔드 구축</strong>
+                    <p>(2024.12 ~ 진행 중)</p>
+
+                    <p>
+                      주요 업무: ACS 아키텍처와 웹 아키텍처 설계, 기준정보 및
+                      공통 모듈 개발, Map Editor 설계,존 기반 트래픽 제어 로직
+                      개발, 역할 기반 메뉴·권한 관리, 작업 자동화 프로세스 및
+                      할당 구현
+                    </p>
+
+                    <p>
+                      사용 기술: React, NestJS, Spring Boot, Java, MariaDB,
+                      MQTT, Redis, Elasticsearch, Logstash, Kibana
+                    </p>
+
+                    <p>프로젝트 성과</p>
+                    <ul>
+                      <li>
+                        React, NestJS, Spring Boot 조합으로 신규 ACS 아키텍처를
+                        설계하고 WBS, 기능명세서, ERD, 화면설계서, 인터페이스
+                        정의서, 클래스 다이어그램 등 산출물을 표준화
+                      </li>
+                      <li>
+                        Map Editor와 제조사별 템플릿·글로벌 템플릿을 정의해 다수
+                        로봇과 제조사 간 호환성을 확보 (VDA5050 연계 기반)
+                      </li>
+                      <li>
+                        존 단위 점유와 경로 계획에 기반한 트래픽 제어를 구현하여
+                        교차 구간 병목과 충돌 위험 최소화
+                      </li>
+                      <li>
+                        사용자 정보 기반 RBAC와 메뉴 관리를 개발해 운영자별 접근
+                        제어와 보안을 강화
+                      </li>
+                      <li>
+                        MQTT 비동기 통신을 도입해 AMR 상태와 작업 데이터의
+                        실시간 정합성을 확보
+                      </li>
+                      <li>
+                        Redis 세션·캐시와 Elasticsearch–Kibana 연계를 통해
+                        모니터링과 응답 속도를 개선
+                      </li>
+                      <li>
+                        작업 자동화 프로세스를 설계·구현하여 작업 할당과 피드백
+                        처리 효율을 향상
+                      </li>
+                    </ul>
                   </div>
+
                   <div className="image-container">
                     <img
                       src={axbisLogin}
-                      alt="axbisLogin"
+                      alt="ACS 로그인 화면"
                       className="inline-image"
                       onClick={() => openModal("axbisLogin")}
                     />
                     <img
                       src={axbisMonitor}
-                      alt="axbisMonitor"
+                      alt="ACS 모니터링 화면"
                       className="inline-image"
                       onClick={() => openModal("axbisMonitor")}
                     />
-                    <p>출처 : 액스비스 로보틱스그룹 소개서 </p>
+                    <p>출처: 액스비스 로보틱스그룹 소개서</p>
                   </div>
                 </li>
               </ol>
             </li>
+
             <li className="highlight">
-              <strong>(주)티라로보틱스</strong> - 솔루션 개발팀 (2022/07/18 -
-              2024/07/31)
+              <strong>(주)티라로보틱스</strong> - 솔루션 개발팀 (2022.07 -
+              2024.07)
               <ol>
                 <li className="flex-container">
                   <div className="text-content">
                     <li>
-                      <strong>P사 FMS 시스템 구축</strong>
+                      <strong>P사 현장 납품 프로젝트</strong>
                       <p>(2022.07 ~ 2022.09)</p>
                       <p>
                         주요 업무: AMR 연동 시스템 및 UI 개발, 네트워크 망 구축
                       </p>
                       <p>사용 기술: Python, TCP Socket, MQTT, PostgreSQL</p>
                       <strong>프로젝트 성과</strong>
-                      <ol>
+                      <ul>
                         <li>
                           AMR과의 원활한 통신을 위해 TCP Socket 및 MQTT
                           프로토콜을 활용하여 데이터 전송 및 수신을 위한 Client
@@ -270,9 +286,9 @@ const ResumeCareer = () => {
                         </li>
                         <li>
                           AMR의 위치에 따른 회전 문제를 특정 구간에서 회전을
-                          못하도록 제어하여 회전 오류 발생률을 50% 이상 감소시킴
+                          못하도록 제어하여 회전 오류 발생률을 30% 감소시킴
                         </li>
-                      </ol>
+                      </ul>
                     </li>
                   </div>
                   <div className="image-container">
@@ -295,11 +311,12 @@ const ResumeCareer = () => {
                 <li className="flex-container">
                   <div className="text-content">
                     <li>
-                      <strong>A사 FMS 시스템 리빌딩</strong> (2022.08 ~ 2022.10)
+                      <strong>A사 현장 납품 프로젝트</strong> (2022.08 ~
+                      2022.10)
                       <p>주요 업무: PLC 신호 통신 및 트래픽 제어 구축</p>
                       <p>사용 기술: Python, PLC, MQTT, PostgreSQL</p>
                       <strong>프로젝트 성과</strong>
-                      <ol>
+                      <ul>
                         <li>PLC 신호 통신을 최적화하여 작업의 효율성을 높임</li>
                         <li>
                           대기 시간에 따른 자동 충전 및 대기위치 이동 개발 및
@@ -309,7 +326,7 @@ const ResumeCareer = () => {
                           구간 별 병목현상 제어 최적화를 통한 트래픽 제어하여
                           작업의 효율성이 2배이상 향상 (작업설비 증가)
                         </li>
-                      </ol>
+                      </ul>
                     </li>
                   </div>
                   <div className="image-container">
@@ -332,7 +349,8 @@ const ResumeCareer = () => {
                 <li className="flex-container">
                   <div className="text-content">
                     <li>
-                      <strong>WRS 개발 G사 POC</strong> (2022.11 ~ 2023.03)
+                      <strong>G사 물류창고 로봇 자동화 솔루션 POC</strong>{" "}
+                      (2022.11 ~ 2023.03)
                       <p>
                         주요 업무: WRS 솔루션 개발 및 로봇 메시징 프로토콜 구현
                       </p>
@@ -341,20 +359,21 @@ const ResumeCareer = () => {
                         Java, JavaScript, RabbitMQ, Erlang
                       </p>
                       <strong>프로젝트 성과</strong>
-                      <ol>
+                      <ul>
                         <li>
                           WRS 솔루션의 메시징 프로토콜 개선으로 로봇 간 효율적인
                           데이터 전송 보장
                         </li>
                         <li>
-                          기준정보성 데이터를 통해 로봇의 부분적 경로 개선
+                          오더관리, 재고관리, 화주사, 물품, 랙 위치 로봇 매핑,
+                          존 관리, 담당자 관리, 주행 정책 등 기준정보 관리 기능
+                          개발
                         </li>
-                        <li>검수 및 보충 시퀀스 개발</li>
                         <li>
                           자동화된 피킹 프로세스를 통해 물류 현장 작업 속도 30%
                           향상 (실제 Picking time 15분 이상소요 -> 10분 소요)
                         </li>
-                      </ol>
+                      </ul>
                     </li>
                   </div>
                   <div className="image-container">
@@ -382,7 +401,7 @@ const ResumeCareer = () => {
                         Camunda
                       </p>
                       <strong>프로젝트 성과</strong>
-                      <ol>
+                      <ul>
                         <li>
                           사용자 피드백을 반영한 UI/UX 개선 작업을 통해 직관적인
                           인터페이스 구현
@@ -399,7 +418,7 @@ const ResumeCareer = () => {
                           라이센스 구매비용 절감, 자사솔루션을 통한 프로젝트
                           진행으로 비즈니스적 성과 도출
                         </li>
-                      </ol>
+                      </ul>
                     </li>
                   </div>
                   <div className="image-container">
@@ -424,7 +443,8 @@ const ResumeCareer = () => {
                 <li className="flex-container">
                   <div className="text-content">
                     <li>
-                      <strong>T사 프로젝트</strong> (2023.09 ~ 2023.11)
+                      <strong>T사 현장 납품 프로젝트</strong> (2023.09 ~
+                      2023.11)
                       <p>주요 업무: 트래픽 제어 및 PLC 제어 개발</p>
                       <p>
                         사용 기술: Spring Framework, Mybatis, MariaDB, Java,
@@ -432,7 +452,7 @@ const ResumeCareer = () => {
                         Camunda
                       </p>
                       <strong>프로젝트 성과</strong>
-                      <ol>
+                      <ul>
                         <li>
                           PLC 제어 시스템을 설계 및 구현하여 로봇움직임에
                           스피드도어 제어, 트래픽 관리의 정확도를 높임
@@ -445,7 +465,7 @@ const ResumeCareer = () => {
                           리포트를 세분화 하고 구간별 시간의 파악을 통해 정확한
                           데이터 분석 쿼리 튜닝
                         </li>
-                      </ol>
+                      </ul>
                     </li>
                   </div>
                   <div className="image-container">
@@ -462,7 +482,7 @@ const ResumeCareer = () => {
                 <li className="flex-container">
                   <div className="text-content">
                     <li>
-                      <strong>S사 대리점 개발</strong> (2023.11 ~ 2024.01)
+                      <strong>S사 대리점 개발 지원</strong> (2023.11 ~ 2024.01)
                       <p>주요 업무: 외부 API 개발 및 서비스 모듈화</p>
                       <p>
                         사용 기술: Spring Framework, Mybatis, MariaDB, Java,
@@ -470,17 +490,20 @@ const ResumeCareer = () => {
                         Camunda
                       </p>
                       <strong>프로젝트 성과</strong>
-                      <ol>
+                      <ul>
+                        <li>
+                          외부 API 통합을 위한 표준화된 인터페이스 설계로 데이터
+                          흐름의 일관성 확보
+                        </li>
                         <li>
                           서비스 모듈화를 통해 각 기능의 독립성을 강화하여
                           유지보수 용이성 증대
                         </li>
                         <li>
-                          외부 인력이 솔루션을 사용할 때, 서비스 부분을 수정하지
-                          않고 라이브러리 형태로 제공하여 작업과 작업수행흐름만
-                          수정하여 동작할 수 있도록 개선하여 유연성 증대
+                          API 성능 모니터링을 통해 병목 현상을 사전에 식별하고
+                          최적화 작업 수행
                         </li>
-                      </ol>
+                      </ul>
                     </li>
                   </div>
                   {/* <div className="image-container">
@@ -492,19 +515,21 @@ const ResumeCareer = () => {
                 <li className="flex-container">
                   <div className="text-content">
                     <li>
-                      <strong>C사 프로젝트</strong> (2024.02 ~ 2024.03)
+                      <strong>C사 현장 납품 프로젝트</strong> (2024.02 ~
+                      2024.03)
                       <p>주요 업무: 배포버전 개발 및 오더 관리</p>
                       <p>
                         사용 기술: Spring Framework, Mybatis, MariaDB, Java,
                         JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, Camunda
                       </p>
                       <strong>프로젝트 성과</strong>
-                      <ol>
+                      <ul>
                         <li>
-                          오더 관리 시스템을 설계, 구현하여 프로세스 효율성 향상
+                          작업 단위 소분, 오더 관리 시스템을 설계하여 프로세스
+                          효율성 향상
                         </li>
                         <li>설비와의 PLC 통신을 통해 작업의 안정성 향상</li>
-                      </ol>
+                      </ul>
                     </li>
                   </div>
                   <div className="image-container">
@@ -521,38 +546,8 @@ const ResumeCareer = () => {
                 <li className="flex-container">
                   <div className="text-content">
                     <li>
-                      <strong>FMS 솔루션 배포</strong> (2024.02 ~ 2024.04)
-                      <p>
-                        주요 업무: Docker를 이용한 FMS 솔루션 배포 환경 구성
-                      </p>
-                      <p>사용 기술: Docker, Docker Compose</p>
-                      <p>프로젝트 성과: FMS 솔루션 컨테이너화 및 배포 자동화</p>
-                      <strong>프로젝트 성과</strong>
-                      <ol>
-                        <li>
-                          Docker와 Docker Compose, DockerHarbor를 활용하여 배포
-                          환경 자동화 (Shell Script){" "}
-                        </li>
-                        <li>NSIS, window installer를 이용한 easy setup</li>
-                        <li>유지보수 용이성 증대</li>
-                      </ol>
-                    </li>
-                  </div>
-                  <div className="image-container">
-                    <img
-                      src={Disher}
-                      alt="Disher"
-                      className="inline-image_one"
-                      onClick={() => openModal("Disher")}
-                    />
-                    <p>출처 : Disher Linked in </p>
-                  </div>
-                </li>
-                <br />
-                <li className="flex-container">
-                  <div className="text-content">
-                    <li>
-                      <strong>H사 프로젝트</strong> (2024.06 ~ 2024.07)
+                      <strong>H사 현장 납품 프로젝트</strong> (2024.06 ~
+                      2024.07)
                       <p>
                         주요 업무: 시나리오 통합 관리 및 차량 순회 로직 개발
                       </p>
@@ -561,13 +556,13 @@ const ResumeCareer = () => {
                         JavaScript, RabbitMQ, Erlang, MQTT, OPC_UA, Camunda
                       </p>
                       <strong>프로젝트 성과</strong>
-                      <ol>
+                      <ul>
                         <li>단일 경로에서 차량을 순회시키기 위한 로직 개발</li>
                         <li>
-                          절전 모드 기능을 개발하여 로봇의 IO보드 부분과 통신,
-                          에너지 소비 절감 서비스 구현
+                          절전 모드 기능을 개발하여 로봇 보드 통신, 에너지 소비
+                          절감 서비스 구현
                         </li>
-                      </ol>
+                      </ul>
                     </li>
                   </div>
                   <div className="image-container">
@@ -586,21 +581,18 @@ const ResumeCareer = () => {
             <li className="highlight">
               <strong>(주)시스게이트</strong> - 생명운영과 사원 (2019.09 ~
               2021.08)
-              <ol>
-                <li>
-                  <strong>운영 및 유지보수 관제</strong>
+              <div className="text-content">
+                <ul>
                   <p>
                     주요 업무: 인프라 운영 및 유지보수, 이벤트 뷰어를 통한
                     시스템 및 애플리케이션 모니터링, 백업 관리
                   </p>
-                  <p>최종 연봉: 2,545 만원</p>
-                  <p>주요 직무: 운영 및 유지보수</p>
                   <p>
                     직무 성과: 시스템 모니터링 도구를 활용하여 인프라의 안정성을
                     높힘, 정기적인 백업 관리로 데이터 손실을 예방
                   </p>
-                </li>
-              </ol>
+                </ul>
+              </div>
             </li>
           </div>
         </section>
@@ -641,45 +633,50 @@ const ResumeCareer = () => {
         <section className="resume-section">
           <h2>자기소개서</h2>
           <div className="highlight">
-            <p>안녕하세요, 저는 최성림입니다.</p>
-
             <p>
-              Java와 Spring 기반 웹 개발을 시작으로 백엔드 개발 역량을
-              다져왔으며, 티라로보틱스에서는 AMR 제어 시스템인 FMS 솔루션의 서버
-              개발을 맡아 API 설계, 외부 시스템 연동, 실시간 통신, DB설계 및
-              쿼리 튜닝 등 다양한 서버 개발 업무를 주도해왔습니다.
+              안녕하세요, 서버 개발자 최성림입니다. Java와 Spring 기반 웹 개발을
+              시작으로 백엔드 역량을 쌓아왔으며, 새로운 기술을 빠르게 습득하고
+              실무에 적용하는 강점을 보유하고 있습니다.
             </p>
 
             <p>
-              또한 Camunda 기반 프로세스 자동화, 메시징 시스템 구축, Python
-              솔루션의 Java 포팅 등 실전 경험을 통해 대규모 시스템의 유연한
-              설계와 확장 가능한 구조를 고려한 개발 역량을 쌓았습니다.
+              티라로보틱스에서는 AMR 관제 시스템(FMS) 솔루션 개발을 맡아 API
+              설계, 외부 연동, DB 모델링과 쿼리 튜닝을 수행했습니다. Camunda를
+              도입해 복잡한 로봇 제어 시나리오를 자동화했고, Python 기반 로직을
+              Spring으로 포팅하며 서비스 구조를 정비했습니다. MQTT·RabbitMQ 기반
+              실시간 통신 안정화로 현장 요구를 빠르게 반영했습니다.
             </p>
 
             <p>
-              최근에는 액스비스에서 ACS 시스템의 전반적인 설계 및 개발과 NestJS
-              기반 웹 백엔드 서비스 설계 및 개발을 진행하며 Node.js 환경에서도
-              RESTful 구조 설계, Entity 기반 동적 쿼리 생성, 실시간 통신(MQTT)
-              연동 등 웹 서버 아키텍처에 대한 이해를 확장했습니다.
+              또한, 물류 도메인 경험도 있습니다. G사 물류창고 자동화 POC에서는
+              Spring Boot, Oracle, MQTT, RabbitMQ를 활용해 피킹 프로세스와
+              메시징 프로토콜을 구현, 작업 속도를 약 30% 개선하였으며,
+              오더·재고·화주사·랙 매핑·존 관리 등 핵심 기능을 개발하며 물류
+              시스템 구조와 운영을 이해했습니다.
             </p>
 
             <p>
-              실무에서는 현장 피드백을 반영한 기능 개선과 코드 품질 향상을 위한
-              정적 분석 도구 도입 등 유지보수성과 안정성을 중시하며, 설계 문서
-              작성(기능 명세서, 테이블 정의서, 화면설계서, 인터페이스 정의서,
-              WBS 등)도 경험하였습니다.
+              최근에는 액스비스에서 ACS 시스템을 설계하며 NestJS 기반 백엔드와
+              MariaDB·TypeORM 데이터 설계를 수행했습니다. Redis 세션 스토어와
+              역할 기반 접근 제어를 구현해 성능과 안정성을 확보했고, ELK 스택을
+              도입해 로그 관리와 모니터링 체계를 고도화하였으며, spring boot
+              기반 솔루션을 개발하며, 로봇과의 통신 및 설비 인터페이스를 이벤트
+              드리븐 형식으로 구현하여 각 장비별 관리를 용이하게 할 수 있도록
+              설계 구현하였습니다.
             </p>
 
             <p>
-              또한 Confluence, Slack, Jandi 등의 협업 도구와 Git 기반 분산 개발
-              환경에 익숙하며, 타 부서와의 실시간 커뮤니케이션을 통해 문제에
-              대한 브레인스토밍과 효율적인 협업도 경험해왔습니다.
+              저의 강점은 새로운 기술을 빠르게 습득하고 실무에 적용하는 것
+              입니다. FMS에 Camunda 오픈소스를 도입해 시나리오를
+              자동화·시각화했으며, 아키텍처·API·DB·인터페이스 문서를 직접 작성해
+              협업 표준을 마련했습니다.
             </p>
 
             <p>
-              기술의 빠른 습득과 다양한 환경에 대한 적응력을 바탕으로, 다양한
-              기술 환경과 도메인 요구에 유연하게 대응할 수 있는 실전형 서버
-              개발자가 되겠습니다.
+              청각장애가 있는 부모님 밑에서 자라며 배운 책임감과 끈기를
+              바탕으로, 저는 특정 도메인에 한정되지 않고 다양한 환경에서
+              안정적이고 확장 가능한 백엔드 서비스를 구축하는 개발자로
+              성장하겠습니다.
             </p>
           </div>
         </section>

@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Profile from "./profile";
-import ResumeCareer from "./resumeCareer";
 import ResumeSkill from "./component/ResumeSkill";
 import ResumePortfolio from "./component/ResumePortfolio";
 import Ready from "./ready";
@@ -11,6 +10,7 @@ import Memo from "./memo";
 import UML from "./uml";
 // import NotFound from './NotFound'; // 404 페이지
 import "./App.css";
+import Resumecareer from "./component/ResumeCareer";
 
 const pageVariants = {
   initial: {
@@ -48,7 +48,7 @@ function App() {
         <Route path="/" element={<AnimatedRoute component={Profile} />} />
         <Route
           path="/resumeCareer"
-          element={<AnimatedRoute component={ResumeCareer} />}
+          element={<AnimatedRoute component={Resumecareer} />}
         />
         <Route
           path="/resumeSkill"

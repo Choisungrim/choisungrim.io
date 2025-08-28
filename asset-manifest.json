@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/choisungrim.io/static/css/main.1fed479e.css",
-    "main.js": "/choisungrim.io/static/js/main.e05b418f.js",
+    "main.css": "/choisungrim.io/static/css/main.05be3b22.css",
+    "main.js": "/choisungrim.io/static/js/main.81e4c67f.js",
     "static/js/453.ed3810f9.chunk.js": "/choisungrim.io/static/js/453.ed3810f9.chunk.js",
     "static/media/minefluencer.png": "/choisungrim.io/static/media/minefluencer.4000631e69e9c5878899.png",
     "static/media/thermofisher.png": "/choisungrim.io/static/media/thermofisher.5102bba2c9fbae8f80e4.png",
@@ -16,21 +16,19 @@
     "static/media/Profile_Info.jpeg": "/choisungrim.io/static/media/Profile_Info.8878cc58caba02bb13cd.jpeg",
     "static/media/parker.jpg": "/choisungrim.io/static/media/parker.c516fdbb7ac362b22b2c.jpg",
     "static/media/camunda.png": "/choisungrim.io/static/media/camunda.2c2f10f4aafa38c88347.png",
-    "static/media/shinsung.jpg": "/choisungrim.io/static/media/shinsung.4e17ce403cb9f0357932.jpg",
     "static/media/Influencer_Ranking.JPG": "/choisungrim.io/static/media/Influencer_Ranking.00e6e0f96774293eeb2d.JPG",
     "static/media/umlImage1.png": "/choisungrim.io/static/media/umlImage1.a6dba19b137e5a57c033.png",
-    "static/media/disher.jpg": "/choisungrim.io/static/media/disher.b867db3c24547d06be69.jpg",
     "static/media/samjin.jpg": "/choisungrim.io/static/media/samjin.7baef1d459d99a7033e6.jpg",
     "static/media/axbis_login.png": "/choisungrim.io/static/media/axbis_login.6bc338df8734f36e2b0f.png",
     "static/media/amore.jpg": "/choisungrim.io/static/media/amore.4e60bee1b77438451f4b.jpg",
     "static/media/ready.gif": "/choisungrim.io/static/media/ready.3a7c445dc238513b80d3.gif",
     "index.html": "/choisungrim.io/index.html",
-    "main.1fed479e.css.map": "/choisungrim.io/static/css/main.1fed479e.css.map",
-    "main.e05b418f.js.map": "/choisungrim.io/static/js/main.e05b418f.js.map",
+    "main.05be3b22.css.map": "/choisungrim.io/static/css/main.05be3b22.css.map",
+    "main.81e4c67f.js.map": "/choisungrim.io/static/js/main.81e4c67f.js.map",
     "453.ed3810f9.chunk.js.map": "/choisungrim.io/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1fed479e.css",
-    "static/js/main.e05b418f.js"
+    "static/css/main.05be3b22.css",
+    "static/js/main.81e4c67f.js"
   ]
 }

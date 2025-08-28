@@ -3,8 +3,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Profile from "./profile";
 import ResumeCareer from "./resumeCareer";
-import ResumeSkill from "./resumeSkill";
-import resumePortfolio from "./component/ResumePortfolio";
+import ResumeSkill from "./component/ResumeSkill";
+import ResumePortfolio from "./component/ResumePortfolio";
 import Ready from "./ready";
 import Loading from "./loading";
 import Memo from "./memo";
@@ -56,7 +56,7 @@ function App() {
         />
         <Route
           path="/resumePortfolio"
-          element={<AnimatedRoute component={resumePortfolio} />}
+          element={<AnimatedRoute component={ResumePortfolio} />}
         />
         <Route path="/ready" element={<AnimatedRoute component={Ready} />} />
         <Route

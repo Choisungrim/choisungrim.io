@@ -1,24 +1,9 @@
-import { useEffect, useMemo, useState, useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/resumeCareer.css";
 
 import { portfolioProjects, portfolioActions } from "../data/portfolioData";
-
-function ButtonRow({ actions, onNavigate }) {
-  return (
-    <div className="button-container_resume">
-      {actions.map(({ label, to }) => (
-        <button
-          key={to}
-          className="chatbot-button_resume"
-          onClick={() => onNavigate(to)}
-        >
-          {label}
-        </button>
-      ))}
-    </div>
-  );
-}
+import ButtonRow from "./ButtonRow";
 
 function Modal({ isOpen, onClose, children }) {
   useEffect(() => {
@@ -120,15 +105,16 @@ const ResumePortfolio = () => {
 
   useEffect(() => {
     document.title = "portfolio";
+    setModalImage(null);
     window.scrollTo(0, 0);
   }, []);
 
-  const handleNavigate = useCallback((path) => navigate(path), [navigate]);
+  const handleNavigate = (path) => navigate(path);
   const openModal = useCallback((src) => setModalImage(src), []);
   const closeModal = useCallback(() => setModalImage(null), []);
 
-  const actions = useMemo(() => portfolioActions, []);
-  const projects = useMemo(() => portfolioProjects, []);
+  const actions = portfolioActions; // 그냥 상수로 사용
+  const projects = portfolioProjects;
 
   return (
     <div style={{ padding: 20 }}>

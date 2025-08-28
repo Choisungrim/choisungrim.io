@@ -1,4 +1,11 @@
 // src/data/skillsData.js
+
+export const skillActions = [
+  { label: "돌아가기", to: "/" },
+  { label: "상세 경력 보기", to: "/loading/resumeCareer" },
+  { label: "상세 포폴 보기", to: "/loading/resumePortfolio" },
+];
+
 export const skillCategories = [
   {
     id: "lang",

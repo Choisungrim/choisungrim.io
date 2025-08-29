@@ -27,40 +27,16 @@ export const roadmap = {
 
 export const careers = [
   {
-    id: "axbis",
-    company: "(주) 액스비스",
-    role: "로보틱스그룹",
-    period: "2024.12 ~ 재직 중",
-    projects: [
-      {
-        title: "ACS 통합 관제 시스템 설계 및 백엔드 구축",
-        period: "2024.12 ~ 진행 중",
-        summary: [
-          "ACS 아키텍처와 웹 아키텍처 설계, 기준정보 및 공통 모듈 개발, Map Editor 설계,존 기반 트래픽 제어 로직 개발, 역할 기반 메뉴·권한 관리, 작업 자동화 프로세스 및 할당 구현",
-          "기술 스택 : React, NestJS, Spring Boot, MariaDB, MQTT, Redis, ELK",
-        ],
-        achievements: [
-          "신규 ACS 아키텍처 및 산출물 표준화(WBS/기능명세서/화면설계서/ERD/인터페이스/클래스다이어그램)",
-          "VDA5050 기반 제조사 템플릿으로 로봇 호환성 확보",
-          "존 점유/경로계획 기반 트래픽 제어로 병목·충돌 최소화",
-          "계정별 역할관리·메뉴관리로 운영자별 접근제어 강화",
-          "MQTT 비동기 통신으로 상태/작업 실시간 정합성 확보",
-          "Redis·ELK 연동으로 모니터링/응답성 개선",
-        ],
-        images: [
-          {
-            src: axbisLogin,
-            alt: "ACS 로그인 화면",
-          },
-          {
-            src: axbisMonitor,
-            alt: "ACS 모니터링 화면",
-            credit: "액스비스 로보틱스그룹 소개서",
-          },
-        ],
-      },
+    id: "sysgate",
+    company: "(주)시스게이트",
+    role: "생명운영과 사원",
+    period: "2019.09 ~ 2021.08",
+    summaryOnly: [
+      "인프라 운영/유지보수, 이벤트 뷰어 모니터링, 백업 관리",
+      "모니터링 고도화로 안정성 향상, 정기 백업으로 데이터 손실 예방",
     ],
   },
+
   {
     id: "thira",
     company: "(주)티라로보틱스",
@@ -202,13 +178,38 @@ export const careers = [
     ],
   },
   {
-    id: "sysgate",
-    company: "(주)시스게이트",
-    role: "생명운영과 사원",
-    period: "2019.09 ~ 2021.08",
-    summaryOnly: [
-      "인프라 운영/유지보수, 이벤트 뷰어 모니터링, 백업 관리",
-      "모니터링 고도화로 안정성 향상, 정기 백업으로 데이터 손실 예방",
+    id: "axbis",
+    company: "(주) 액스비스",
+    role: "로보틱스그룹",
+    period: "2024.12 ~ 재직 중",
+    projects: [
+      {
+        title: "ACS 통합 관제 시스템 설계 및 백엔드 구축",
+        period: "2024.12 ~ 진행 중",
+        summary: [
+          "ACS 아키텍처와 웹 아키텍처 설계, 기준정보 및 공통 모듈 개발, Map Editor 설계,존 기반 트래픽 제어 로직 개발, 역할 기반 메뉴·권한 관리, 작업 자동화 프로세스 및 할당 구현",
+          "기술 스택 : React, NestJS, Spring Boot, MariaDB, MQTT, Redis, ELK",
+        ],
+        achievements: [
+          "신규 ACS 아키텍처 및 산출물 표준화(WBS/기능명세서/화면설계서/ERD/인터페이스/클래스다이어그램)",
+          "VDA5050 기반 제조사 템플릿으로 로봇 호환성 확보",
+          "존 점유/경로계획 기반 트래픽 제어로 병목·충돌 최소화",
+          "계정별 역할관리·메뉴관리로 운영자별 접근제어 강화",
+          "MQTT 비동기 통신으로 상태/작업 실시간 정합성 확보",
+          "Redis·ELK 연동으로 모니터링/응답성 개선",
+        ],
+        images: [
+          {
+            src: axbisLogin,
+            alt: "ACS 로그인 화면",
+          },
+          {
+            src: axbisMonitor,
+            alt: "ACS 모니터링 화면",
+            credit: "액스비스 로보틱스그룹 소개서",
+          },
+        ],
+      },
     ],
   },
 ];

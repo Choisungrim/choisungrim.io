@@ -47,9 +47,8 @@ function ProjectItem({ project, onOpen }) {
     <div className="flex-container">
       <div className="text-content">
         <li>
-          <strong>{title}</strong>
+          {title} {period && <span>({period})</span>}
         </li>
-        {period && <p>({period})</p>}
         {summary.length > 0 && (
           <>
             <p>주요 내용</p>
@@ -106,6 +105,7 @@ function CareerCard({ career, onOpen }) {
         <li>
           <strong>{career.company}</strong> - {career.role} ({career.period})
         </li>
+        <br />
         {career.summaryOnly ? (
           <div className="text-content">
             <ul>

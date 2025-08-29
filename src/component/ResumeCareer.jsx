@@ -116,11 +116,18 @@ function CareerCard({ career, onOpen }) {
         <br />
         {career.summaryOnly ? (
           <div className="text-content">
-            <ul>
-              {career.summaryOnly.map((t, i) => (
-                <li key={i}>{t}</li>
-              ))}
-            </ul>
+            <>
+              <ul>
+                <li>
+                  <p>주요 내용</p>
+                </li>
+                <ul>
+                  {career.summaryOnly.map((t, i) => (
+                    <li key={i}>{t}</li>
+                  ))}
+                </ul>
+              </ul>
+            </>
           </div>
         ) : (
           <div className="project-list">

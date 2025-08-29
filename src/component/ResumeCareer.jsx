@@ -51,21 +51,29 @@ function ProjectItem({ project, onOpen }) {
         </li>
         {summary.length > 0 && (
           <>
-            <p>주요 내용</p>
             <ul>
-              {summary.map((s, i) => (
-                <li key={i}>{s}</li>
-              ))}
+              <li>
+                <p>주요 내용</p>
+              </li>
+              <ul>
+                {summary.map((s, i) => (
+                  <li key={i}>{s}</li>
+                ))}
+              </ul>
             </ul>
           </>
         )}
         {achievements.length > 0 && (
           <>
-            <p>프로젝트 성과</p>
             <ul>
-              {achievements.map((a, i) => (
-                <li key={i}>{a}</li>
-              ))}
+              <li>
+                <p>프로젝트 성과</p>
+                <ul>
+                  {achievements.map((a, i) => (
+                    <li key={i}>{a}</li>
+                  ))}
+                </ul>
+              </li>
             </ul>
           </>
         )}
